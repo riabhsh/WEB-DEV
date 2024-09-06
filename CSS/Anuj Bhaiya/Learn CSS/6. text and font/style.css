@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Handjet:wght@100..900&display=swap');
+
+h1{
+    color: blueviolet;
+    color: black;
+    /* text-shadow: 4px 4px 1px rgb(226, 43, 43), 8px 8px 1px blue; */
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: "Handjet", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration-line: underline;
+    text-decoration-color: brown;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2x;
+    cursor: pointer;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+p{
+    /* text-indent: 50px; */
+    /* letter-spacing: 0.1rem; */
+    line-height: 1.6rem;
+    word-spacing: 10px;
+
+    font-family: "Fjalla One", sans-serif;
+    font-size: 20px;
+}

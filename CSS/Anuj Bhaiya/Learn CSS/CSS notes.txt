@@ -1,0 +1,156 @@
+// OM NAMAH SHIVAY
+
+[1] Introduction
+
+-three types of css
+inline CSS
+internal CSS 
+External Css(Recommended)
+
+-Seperation Of Concerns
+it means seperate things which are different
+
+-----------------------------
+
+[2] Selectors
+- Types Of Selectors
+1. Simple Selectors
+    a. Element selector
+    b. Class Selector
+    c. Id Selector
+
+2. Universal Selectors (*)
+3. Grouping Selectors
+4. Nested Selectors
+
+5. Pseude Classes(:hover, :link, :visited, :active, :first-child, :last-child, :nth-child etc.)
+6. Pseude Elements(::before, ::after etc.)
+
+-Specificity Order
+!important > id > class > element > *
+
+-----------------------------
+
+[3] Colors
+-ways of Defining colors
+1. color names
+2. HEX Codes
+3. rgb(red(255,#fff), green(255,#fff), blue(255,#fff))
+4. rgba(red(255,#fff), green(255,#fff), blue(255,#fff),alpha(0.999))
+5. hsl(hue(360deg), saturation(%), lightness(%))
+6. hsla(hue(360deg), saturation(%), lightness(%), alpha(.999))
+
+
+resources:
+webaim.org
+coolers.co
+
+-----------------------------
+
+[4] Units
+
+by root element is 16px.
+
+-ways of Defining colors
+1. pixels(px)[its css pixel it depends on DPR(density pixel ratio, it converts css pixels into device pixels)] [absolute unit]
+2. viewport height(vh) [absolute unit]
+3. viewport width(vw) [absolute unit]
+
+4. percentage(%) [relative unit]
+5. element(em) [relative unit] {1em = 16px}
+6. root element(rem) [relative unit] (eg: 2rem)
+
+-relative units: are good for User accesebilites. ,it is relative to something else like parent, viewport etc.
+
+-note: dont confuse em with "emphasis element".
+
+-set font sizes in starting so that you can work easily
+
+-----------------------------
+
+[5] Box Model
+
+-what is box model?
+ [ MARGIN [ PADDING [ BORDER [ CONTENT ] BORDER ] PADDING ] MARGIN ]
+
+-Div: Div is a pure container
+
+-content: is the content.
+-border: is the border around the content.
+-padding: it seperates content from the border. (they are just space)
+-margin: is seperates Elements from each other. (they are just space)s
+
+-box sizing: content-box(default), border-box(use this for accurate sizing because it works with respect to border).
+
+-in content-box all elements changes there size because of there content and there size changes differently even though we apply same width and height thats why we use border-box
+
+-----------------------------
+
+[6] Text and Font
+
+-Common properties for texts
+color
+cursor: pointer;(mostly used in links)
+text-align
+text-transform
+
+text-decoration
+text-decoration-line: underline;
+text-decoration-color: brown;
+text-decoration-style: wavy;
+text-decoration-thickness: 2x;
+
+text-indent
+letter-spacing
+word-spacing
+line-height
+white-space
+
+text-shadow: x y blur-radius color;
+
+-Common properties for Fonts
+
+@import : import fonts from outside
+
+web safe fonts: basic fonts supported by all the devices
+
+font-family: font, fallback 1, fallback 2 fallback n etc..
+font-size
+font-weight
+font-style
+
+-----------------------------
+
+[7] CSS display property
+
+1. block: it takes the full width.(it breaks the content flow)
+    paragraphs(<p>)
+    headings(<h1> to <h6>)
+    divisions(<div>)
+    forms(<form>)
+    list(<ol>, <ul> and <li>) etc..
+
+2. inline: it takes the width according to the content, top and bottom margin not works here.
+    images(<img>)[its actually an inline-block element]
+    span(<span>)
+    anchor(<a>) etc...
+
+3. inline-block: it takes width according to the content but you can give margin of top and bottom also basically you can have full control here and it have good things from inline and block display elements
+
+4. none
+
+-----------------------------
+
+[8] CSS Postion property
+
+-static: default normal position.
+
+-relative: changes postion with relative(or respect) to the parent element. 
+
+-absolute: it gets out from the normal flow of the html and works with repects to the root element(but not always the case it also works with their parent who ever have position relative!).
+
+-fixed: it fixes on the screen works with related to the viewport or the screen.
+
+-sticky: it fixed with respect to the parent and when the parent moves out of the screen completely while scrolling then it also moves along with the parent.
+
+- Z-index: it determines which element should be top on which element.. the more the z-index the top the are.

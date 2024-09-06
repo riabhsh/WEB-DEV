@@ -1,0 +1,47 @@
+/* Universal Selector */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+   font-family: cursive;
+}
+
+/* Element Selector */
+body{
+    font-size: 24px;
+}
+
+/* ID Selector */
+#idSelector{
+    color: red;
+}
+
+/* Class Selector */
+.classSelector{
+    color: rebeccapurple;
+    font-family: monospace;
+}
+
+/* Grouping Selector */
+.highlight, .classSelector{
+    background-color: yellow;
+    color: red;
+    font-style: italic;
+}
+
+/* Nested Selector */
+header> #idSelector{
+    color: green;
+}
+
+
+p:hover{
+    color: blue !important; /*Important Selector*/
+}
+
+/* Pseudo Classes */
+p:hover{
+    color: chocolate;
+}
+
+
