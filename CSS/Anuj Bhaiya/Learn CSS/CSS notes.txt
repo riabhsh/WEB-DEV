@@ -154,3 +154,41 @@ font-style
 -sticky: it fixed with respect to the parent and when the parent moves out of the screen completely while scrolling then it also moves along with the parent.
 
 - Z-index: it determines which element should be top on which element.. the more the z-index the top the are.
+
+-----------------------------
+
+[9] CSS Floats
+
+- CSS Overflow
+CSS Overflow property contains what happens to content that is too big to fit into an Area.
+
+Overflow values:
+1. visible 
+2. hidden 
+3. scroll 
+4. auto (it gives scroll automatically where needs)
+
+- CSS FLoat 
+CSS Float property specifies how an element should float.
+
+Float values:
+1. left
+2. right
+3. none
+4. inherit
+
+- CSS clear
+CSS Clear property specifies what elements can float beside the cleared element and on which side.
+
+Clear values:
+1. left
+2. right
+3. both
+4. none
+5. inherit
+
+mostly we float and clear proeperty for text and images (we use flex and grid for layouts)
+
+-----------------------------
+
+[10] CSS Flexbox
