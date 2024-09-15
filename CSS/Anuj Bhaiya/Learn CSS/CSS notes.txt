@@ -192,3 +192,32 @@ mostly we float and clear proeperty for text and images (we use flex and grid fo
 -----------------------------
 
 [10] CSS Flexbox
+
+-Flex container: flex container becomes flexible
+by setting the display property flex.
+
+main-axis: flexbox works on main-axis(by default the horizontal one).
+cross-axis: opposite of the main-axis.
+
+0. Display: flex (to activate flex)
+1. flex-direction:(for changing the main axis)
+2. flex-wrap
+3. flex-flow(wrap and direction short hand)
+4. justify-content
+5. align-items
+6. align-content
+7. gap
+
+-Flex Children: The direct children of a flex container automatically
+becomes the flex children.
+
+1. Order (change the order of the element more the number more the order changed)
+2. flex-grow (by default 0)
+3. flex-shrink (by default 1, woks on mo-wrap)
+4. flex-basis (for giving initial width to individual child elements. worked with main-axis)
+5. flex (shorthand for grow shrink basis)
+6. align-self(works on the cross axis for individual child)
+
+-----------------------------
+
+[11] CSS Grid
