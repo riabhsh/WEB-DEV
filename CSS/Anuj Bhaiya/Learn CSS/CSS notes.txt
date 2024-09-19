@@ -199,7 +199,7 @@ by setting the display property flex.
 main-axis: flexbox works on main-axis(by default the horizontal one).
 cross-axis: opposite of the main-axis.
 
-0. Display: flex (to activate flex)
+0. display: flex (to activate flex)
 1. flex-direction:(for changing the main axis)
 2. flex-wrap
 3. flex-flow(wrap and direction short hand)
@@ -211,7 +211,7 @@ cross-axis: opposite of the main-axis.
 -Flex Children: The direct children of a flex container automatically
 becomes the flex children.
 
-1. Order (change the order of the element more the number more the order changed)
+1. order (change the order of the element more the number more the order changed)
 2. flex-grow (by default 0)
 3. flex-shrink (by default 1, woks on mo-wrap)
 4. flex-basis (for giving initial width to individual child elements. worked with main-axis)
@@ -221,3 +221,216 @@ becomes the flex children.
 -----------------------------
 
 [11] CSS Grid
+
+-Grid container: The grid container becomes grid by setting display: grid; property on the parent.
+
+0. display: grid (to activate grid)
+1. gap
+2. grid-template-columns
+3. grid-template-rows
+4. grid-auto-rows:
+4. justify-content
+5. align-content
+6. align-items
+
+-Grid items: The direct chidren of grid container automatically becomes grid items.
+
+0. justify-self
+1. align-self
+
+grid-column-start
+grid-column-end
+2. grid-column
+
+grid-row-start
+grid-row-end
+3. grid-row
+
+4. grid-area: row-start / column-start/ row-end / column-end
+
+5. Grid Template Area:
+named grid items can be referred by the grid-template-areas property of the grid container. the grid-area property can also be used to assign names to grid items.
+
+.grid-container{
+    grid-template-areas{
+        'header header header header header header'
+        'menu main main main right right'
+        'menu footer footer footer footer footer';
+    }
+
+    .item1 {grid-area: header;}
+    .item2 {grid-area: menu;}
+    .item3 {grid-area: main;}
+    .item4 {grid-area: right;}
+    .item5 {grid-area: footer;}
+}
+
+-----------------------------
+
+[12] CSS media queries
+
+/* old way of writing media queries */
+@media (max-width: 900px){
+    body{
+       background-color: rgb(255, 36, 127);
+    }
+}
+
+@media (min-width: 400px) and (max-width: 800px){
+    body{
+       background-color: rgb(120, 36, 255);
+    }
+}
+
+@media screen and (min-width: 800px){
+    .container{
+        --my-var: pink;
+    }
+}
+
+/* New way of writing media queries */
+
+/* orientation works when width < height */
+@media (orientation: portrait){
+    body{
+        background-color: pink;
+    }
+}
+
+@media (width <= 200px){
+    body{
+        background-color: greenyellow;
+    }
+}
+
+
+//Different Screens According to tailwind
+      //=> @media (min-width: 640px) { ... }
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+
+Recommended media points
+991px
+767px
+479px
+
+
+- always write media queries in higher to lower order.
+- min-width means starting from.
+- max-width means upto from.
+- for range use AND.
+- orientation works when width < height.
+- screen, print, all are types of media queries.
+
+-----------------------------
+
+[13] CSS Variables
+
+-it is very important in css as it prevents repetition 
+of values in css
+
+syntax: --variable-name: value;
+selector{
+    property1: value1;
+    property2: var(--variable-name, fallback);
+}
+
+note: 
+-variable works over the hierarchy of the tags.
+-you can override variables in heirachy.
+-also try to put fallbacks.
+
+-global variable(it is accessible by all the elements)
+:root{
+    --my-gloabal-variable: #222;
+}
+
+-----------------------------
+
+[14] CSS Pseudo Classes and Pseudo Elements
+
+--Pseudo Class: is used to define a special state of an element.
+pseudo class are also known as Pseudo Selectors.
+
+Examples:
+- :visited, :link
+- :hover, :active
+- :first-child
+- :last-child
+- :nth-child etc...
+
+/* nth child */
+/* n = 0, n starts from zero */
+/* an+b */
+
+--Pseudo Elements: is used to style specified parts of an element.
+
+Examples:
+- ::first-letter
+- ::first-line
+- ::before (there content:'' is out of dom).
+- ::after  (there content:'' is out of dom).
+- ::selection etc...
+
+
+note: 
+-pseudo-class: defining state of an element.
+-pseudo-element: part of an element.
+-----------------------------
+
+[15] CSS Transform
+
+-The Transform property applies a 2D or 3D transformation to an element.
+thid property allows you to rotate, scale, move, skew etc.
+
+Examples:
+-scale (default: 1, default: 1) [for x and y respectively]
+-scaleX (default: 1)
+-scaleY (default: 1)
+-scaleZ (default 1)
+
+-skew(45deg, 10deg) [for x and y respectively]
+-skewX(20deg)
+-skewy(40deg)
+
+-translate(50%, 50%) [for x and y respectively]
+-translateX(50%)
+-translateY(60%)
+
+-rotate(50deg)
+-rotateX(10deg)
+-rotateY(62deg)
+-rotateZ(16deg)
+
+eg: transform: rotate(5deg) scale(1) skew(50deg) translate(45%);
+
+-Transform Origin(its basically a refference point)
+The transform origin property allows you to change the 
+position of transformed elements.
+
+2D transformations can change the x-axis and y-axis of an element.
+3D transformations can also change the z-axis of an element.
+
+supported values:
+- left
+- center
+- right
+- length
+- %
+
+transform-origin: 100px 200px (x and y axis respectively)
+ transform-origin: right center;
+
+ 

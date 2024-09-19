@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: red;
+}
+
+
+/* New way of writing media queries */
+
+/* orientation works when width < height */
+@media (orientation: portrait){
+    body{
+        background-color: pink;
+    }
+}
+
+@media (width <= 200px){
+    body{
+        background-color: greenyellow;
+    }
+}
+
+/* old way of writing media queries */
+@media (max-width: 900px){
+    body{
+       background-color: rgb(255, 36, 127);
+    }
+}
+
+@media (min-width: 400px) and (max-width: 800px){
+    body{
+       background-color: rgb(120, 36, 255);
+    }
+}
+
+@media (400px <= width <= 800px){
+    body{
+       background-color: rgb(120, 36, 255);
+    }
+}
+
+/* always write media queries in higher to lower order */
+/* min-width means starting from */
+/* max-width means upto from */
+/* range: use AND */
+/* orientation works when width < height */
