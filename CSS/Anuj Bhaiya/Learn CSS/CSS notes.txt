@@ -388,6 +388,7 @@ Examples:
 note: 
 -pseudo-class: defining state of an element.
 -pseudo-element: part of an element.
+
 -----------------------------
 
 [15] CSS Transform
@@ -431,6 +432,132 @@ supported values:
 - %
 
 transform-origin: 100px 200px (x and y axis respectively)
- transform-origin: right center;
+transform-origin: right center;
 
- 
+-----------------------------
+
+[16] CSS Transition 
+
+CSS transitions allow you to change property values smoothly, over a 
+given duration.
+
+to create a transition effect, you must specify two things:
+* the CSS property you want to add an effect to.
+* the duration of the effect.
+
+note: if duration part is not specified, 
+the transition will have no effect,
+because the default value is 0.
+
+--transition
+--transition-delay
+--transition-duration
+--transition-property [on which property you want a transition]
+
+--transition-timing-function
+the transition-timing-function property can have following values:
+*ease - specifies a transition effect with a slow start, then fast, then end slowly(this is default). 
+*ease-in - specifies a transition effect with a slow start.
+*ease-out - specifies a transtion effect with a slow end.
+*ease-in-out - specifies a transition effect with with a slow start and end.
+*linear - specifies a transition effect with the same speed from start to end.
+*cubic-bezier(n,n,n,n) - lets youo define your own values in a cubic-beizer function.
+
+examples:
+transition-delay: 0s;
+
+transition-duration: 0.5s;
+
+transition-property: all;
+transition-property: border-radius, background-color, transform;
+
+transition-timing-function
+
+-----------------------------
+
+[17] CSS Animations 
+
+with transition you can work only one state(or two points),
+but with Animations you can control as much as you can.
+
+- CSS allows the animation of HTML elements without using
+javascript. you can change as many CSS properties as you want,
+as often as you wish. to use CSS animation, you must first specify 
+some keyframes for the animation.
+
+keyframes hold what styles the element will have at certain times.
+
+--animation
+--animation-name
+--animation-duration
+--animation-delay
+--animation-iteration-count
+--animation-direction
+--animation-timing-function
+
+
+--animation-direction
+the animation-direction property specifies whether an animation should 
+be played forwards, backwards or in alternate cycles.
+    *normal: the animation played as normal(forwards). this is default.
+    *reverse: in reverse direction(backwards).
+    *alternate: the animation is played forwards first, then backwards.
+    *alternate-reverse: the animation is played backwards first, then forwards.
+
+--animation-timing-function
+it is same as in the transition one
+the transition-timing-function property can have following values:
+    *ease - specifies a transition effect with a slow start, then fast, then end slowly(this is default). 
+    *ease-in - specifies a transition effect with a slow start.
+    *ease-out - specifies a transtion effect with a slow end.
+    *ease-in-out - specifies a transition effect with with a slow start and end.
+    *linear - specifies a transition effect with the same speed from start to end.
+    *cubic-bezier(n,n,n,n) - lets youo define your own values in a cubic-beizer function.
+
+--animation-fill-mode
+The animation-fill-property specifies a style for the target element WHEN
+the ANIMATION is NOT PLAYING(before it starts, after it ends, or both).
+
+    *none - default value. Animation will not apply any 
+    styles to the element before or after it is excecuting.
+
+    *forwards - the element will retain the style values that is set by the last 
+    keyframe(depends an animation-direction and animation-iteration-count).
+
+    *backwards - the element will get the style values that is set by the first
+    keyframe(depends on animation-direction), and retain this during the animation-delay period.
+
+    *both - the elements will follow the rules for both forwards and backwards,
+
+
+examples:
+
+selector{
+    animation-name: circles;
+}
+
+selector2{
+    animation-name: orbit;
+}
+
+@keyframes circles{
+    0%, 100%{transform: translate(0, 0);}
+
+    25%{transform: translate(300px, 0);    }
+
+    50%{transform: translate(300px, 300px);}
+
+    75%{transform: translate(0, 300px);}
+}
+
+@keyframes orbit{
+    from {
+        transform: rotate(0);
+    }
+
+    to{
+       transform: rotate(360deg); 
+    }
+}
+
++++++++++++++++++++ Completed! +++++++++++++++++++
