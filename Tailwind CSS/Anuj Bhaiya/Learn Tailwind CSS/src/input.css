@@ -6,6 +6,20 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    border: 1px solid tomato;
+@layer base{
+    html,body, #companies-lines-group{
+        overflow-x: hidden;
+    }
+
+    body{
+        @apply font-body;
+    }
+
+    h1,h2,h3{
+        @apply font-display;
+    }
+
+    .container{
+        @apply px-6 py-12 max-w-7xl mx-auto mt-16 lg:px-8 lg:mt-32;
+    }
 }

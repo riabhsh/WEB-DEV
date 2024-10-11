@@ -9,9 +9,10 @@ module.exports = {
       },
       fontFamily:{
         'rishabh': ["Bebas Neue"],
-        'display':['poppings', 'sans-serif'],
+        'display': ['Poppins', 'sans-serif'],
         'body': ['Inter', 'sans-serif']
-      }
+      },
+      
     },
   },
   plugins: [],
