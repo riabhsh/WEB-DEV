@@ -1,0 +1,122 @@
+//++++++ Comments in Js ++++++
+
+// Single line comments
+
+/* 
+    multi line comments
+*/ 
+
+//++++++ Operators in Js ++++++
+used to perform some operations on data
+
+1. Arithmatic Operators
++,-,*,/,%,**
+
+2. Unary Operators
+-post increment/decrement
+a++, a--
+-pre increment/decrement
+++a, --a
+
+3. Assignment Operators
+=, +=, -=, *=, %=, **=
+example: a+=1 means a=a+1
+
+4. Comparison(Relational) Operators
+==, ===, !=, !==, <, >, <=, >=
+
+it Compares two Expressions and then gives true and false...
+
+Equal to ==
+Equalt to & type === //it is a stricter version of equal to
+not euqal to !=
+not equal to & type !== //it is a stricter version of not equal to
+
+
+5. Logical Operators
+Logical AND &&
+Logical OR ||
+Logical Not !
+
+it Evaluates multiple Expressions and then gives true and false... works on boolean algebra.
+
+6.Ternary Operators
+works on 3 operands one is condition and two operands
+
+condition?true output:false output;
+
+
+//++++++ Conditional Statements in Js ++++++
+if, if else, else if, switch(very very less used)
+
+//++++++ alert/prompt in in Js ++++++
+alert is popup in a browser with some message
+alert("message!");
+
+prompt is popup in a browser with some message and also takes some input
+num = prompt("Enter a number!");
+
+
+//**** 01 Introduction ****//
+
+--Javascript is a programming language, 
+we use it to give instructions to the computer.
+
+
+--Variables: variables are containers for data.
+give variables meaningful name.
+by default variables are undefined if they dont have value.
+
+eg:
+let name = "rishabh maurya";
+let age = 24;
+let carrer = undefined;
+let wealth = null;
+let ambition = true;
+
+
+-- Rules for variables --
+1. variables are case sensitive; "a" & "A" is different.
+2. only letters, digits, underscore(_) and $ is allowed. (not even space(use " " )).
+3. only a letter, underscore(_) or $ should be in 1st character.
+4. reserved words cant be a variable names.
+
+
+-- Convention for writing variables --
+-lowercase
+-UPPPERCASE
+-camelCase [recommended]
+-snake_case 
+-kabab-case
+-PascalCase
+-generally we prefer in Capital letter.
+
+
+-- Variable Scope keywords(var, let & const) --
+-var: a global scope variable, 
+variable can be re-declared & updated.
+
+-let: a block scope variable, 
+variable can't be re-declared but can be updated.
+
+-const: a block scope variable, 
+variable can't be re-declared & updated.
+*note: but key of the object can be updated.
+
+*note: let and const introduced after ES6 and these two are used now days.. 
+
+-- Data Types--
+1. Primitive:
+-number
+-strings
+-boolean
+-undefined (by default all variables are undefined )
+-null (absence of an object, its 'type of' is object but its primitive)
+-BigInt (stores big integer values).
+-symbol 
+
+2. non-primitive(made up with priitive data types)
+-objects(it's a collection or group of values | stores in key:value pairs).
+generally we create objects with const.
+--array
+--function

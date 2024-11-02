@@ -47,3 +47,7 @@ setupIntersectionObserver(line3, true, 0.15);
 
 const littleline = document.getElementById('scrollLine');
 setupIntersectionObserver(littleline, false, 0.30);
+ 
+const line4 = document.getElementById('line4');
+
+setupIntersectionObserver(line4, true, 0.8);
