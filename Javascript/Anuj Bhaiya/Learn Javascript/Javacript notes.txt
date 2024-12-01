@@ -2,562 +2,71 @@
 
 [1] Introduction
 
--three types of css
-inline CSS
-internal CSS 
-External Css(Recommended)
+= Javascript is a scripting language that enables you to create dynamically
+updated content, control multimedia, animate images and much more
 
--Seperation Of Concerns
-it means seperate things which are different
+js code inserted between
+<script>and<script> tags.
 
------------------------------
+script loaded in last, style loaded first.
 
-[2] Selectors
-- Types Of Selectors
-1. Simple Selectors
-    a. Element selector
-    b. Class Selector
-    c. Id Selector
+=how js works
 
-2. Universal Selectors (*)
-3. Grouping Selectors
-4. Nested Selectors
+js file -> parser -> AST(Abstract Syntax Tree) -> Conversion to Machine Code(011010...) -> Converted Machine Code -> Code Runs(runs in JS ENGINES like V8)
 
-5. Pseude Classes(:hover, :link, :visited, :active, :first-child, :last-child, :nth-child etc.)
-6. Pseude Elements(::before, ::after etc.)
+= Variables in Javascript
+variables are containers for storing data(storing data values). we can declare
+a variable by using these keywords.
 
--Specificity Order
-!important > id > class > element > *
+1.var(old)
+2.let(mutable can't be changed)
+3.const(immutable can't be changed)
 
------------------------------
-
-[3] Colors
--ways of Defining colors
-1. color names
-2. HEX Codes
-3. rgb(red(255,#fff), green(255,#fff), blue(255,#fff))
-4. rgba(red(255,#fff), green(255,#fff), blue(255,#fff),alpha(0.999))
-5. hsl(hue(360deg), saturation(%), lightness(%))
-6. hsla(hue(360deg), saturation(%), lightness(%), alpha(.999))
-
-
-resources:
-webaim.org
-coolers.co
+= Rules for writing variables
+-variables name must start with either a letter, an underscore _, or the
+dollar sign $
+- variable names can't start with numbers.
+Javascript is case-sensitive.
+.keywords can't be used as variables names.
 
 -----------------------------
 
-[4] Units
+[2] Data Types
+a Data type in programming, is a classification that specifies which type 
+of value a variable has and what type of mathematical, relational or logical
+operations can be applied to it without causing an error.
 
-by root element is 16px.
+- String
+- Number
+- Boolean
+- Undefined
+- Object
 
--ways of Defining colors
-1. pixels(px)[its css pixel it depends on DPR(density pixel ratio, it converts css pixels into device pixels)] [absolute unit]
-2. viewport height(vh) [absolute unit]
-3. viewport width(vw) [absolute unit]
+= Javascript Type Comversion
+1.Javascript Considers 0 as false and all non-zero numbers as true.
+and, if true is converted to a number, the result is always 1.
 
-4. percentage(%) [relative unit]
-5. element(em) [relative unit] {1em = 16px}
-6. root element(rem) [relative unit] (eg: 2rem)
+2.String() takes null and undefined and converts them into String.
 
--relative units: are good for User accesebilites. ,it is relative to something else like parent, viewport etc.
+3.in Javascript, undefined, null, 0, NaN," converts to false. all other
+values gives true.
 
--note: dont confuse em with "emphasis element".
-
--set font sizes in starting so that you can work easily
-
------------------------------
-
-[5] Box Model
-
--what is box model?
- [ MARGIN [ PADDING [ BORDER [ CONTENT ] BORDER ] PADDING ] MARGIN ]
-
--Div: Div is a pure container
-
--content: is the content.
--border: is the border around the content.
--padding: it seperates content from the border. (they are just space)
--margin: is seperates Elements from each other. (they are just space)s
-
--box sizing: content-box(default), border-box(use this for accurate sizing because it works with respect to border).
-
--in content-box all elements changes there size because of there content and there size changes differently even though we apply same width and height thats why we use border-box
+-Number()
+-String()
+-Boolean() [doule aur single quotes are converted to true "", '']
 
 -----------------------------
 
-[6] Text and Font
-
--Common properties for texts
-color
-cursor: pointer;(mostly used in links)
-text-align
-text-transform
-
-text-decoration
-text-decoration-line: underline;
-text-decoration-color: brown;
-text-decoration-style: wavy;
-text-decoration-thickness: 2x;
-
-text-indent
-letter-spacing
-word-spacing
-line-height
-white-space
-
-text-shadow: x y blur-radius color;
-
--Common properties for Fonts
-
-@import : import fonts from outside
-
-web safe fonts: basic fonts supported by all the devices
-
-font-family: font, fallback 1, fallback 2 fallback n etc..
-font-size
-font-weight
-font-style
-
------------------------------
-
-[7] CSS display property
-
-1. block: it takes the full width.(it breaks the content flow)
-    paragraphs(<p>)
-    headings(<h1> to <h6>)
-    divisions(<div>)
-    forms(<form>)
-    list(<ol>, <ul> and <li>) etc..
-
-2. inline: it takes the width according to the content, top and bottom margin not works here.
-    images(<img>)[its actually an inline-block element]
-    span(<span>)
-    anchor(<a>) etc...
-
-3. inline-block: it takes width according to the content but you can give margin of top and bottom also basically you can have full control here and it have good things from inline and block display elements
-
-4. none
-
------------------------------
-
-[8] CSS Postion property
-
--static: default normal position.
-
--relative: changes postion with relative(or respect) to the parent element. 
-
--absolute: it gets out from the normal flow of the html and works with repects to the root element(but not always the case it also works with their parent who ever have position relative!).
-
--fixed: it fixes on the screen works with related to the viewport or the screen.
-
--sticky: it fixed with respect to the parent and when the parent moves out of the screen completely while scrolling then it also moves along with the parent.
-
-- Z-index: it determines which element should be top on which element.. the more the z-index the top the are.
-
------------------------------
-
-[9] CSS Floats
-
-- CSS Overflow
-CSS Overflow property contains what happens to content that is too big to fit into an Area.
-
-Overflow values:
-1. visible 
-2. hidden 
-3. scroll 
-4. auto (it gives scroll automatically where needs)
-
-- CSS FLoat 
-CSS Float property specifies how an element should float.
-
-Float values:
-1. left
-2. right
-3. none
-4. inherit
-
-- CSS clear
-CSS Clear property specifies what elements can float beside the cleared element and on which side.
-
-Clear values:
-1. left
-2. right
-3. both
-4. none
-5. inherit
-
-mostly we float and clear proeperty for text and images (we use flex and grid for layouts)
-
------------------------------
-
-[10] CSS Flexbox
-
--Flex container: flex container becomes flexible
-by setting the display property flex.
-
-main-axis: flexbox works on main-axis(by default the horizontal one).
-cross-axis: opposite of the main-axis.
-
-0. display: flex (to activate flex)
-1. flex-direction:(for changing the main axis)
-2. flex-wrap
-3. flex-flow(wrap and direction short hand)
-4. justify-content
-5. align-items
-6. align-content
-7. gap
-
--Flex Children: The direct children of a flex container automatically
-becomes the flex children.
-
-1. order (change the order of the element more the number more the order changed)
-2. flex-grow (by default 0)
-3. flex-shrink (by default 1, woks on mo-wrap)
-4. flex-basis (for giving initial width to individual child elements. worked with main-axis)
-5. flex (shorthand for grow shrink basis)
-6. align-self(works on the cross axis for individual child)
-
------------------------------
-
-[11] CSS Grid
-
--Grid container: The grid container becomes grid by setting display: grid; property on the parent.
-
-0. display: grid (to activate grid)
-1. gap
-2. grid-template-columns
-3. grid-template-rows
-4. grid-auto-rows:
-4. justify-content
-5. align-content
-6. align-items
-
--Grid items: The direct chidren of grid container automatically becomes grid items.
-
-0. justify-self
-1. align-self
-
-grid-column-start
-grid-column-end
-2. grid-column
-
-grid-row-start
-grid-row-end
-3. grid-row
-
-4. grid-area: row-start / column-start/ row-end / column-end
-
-5. Grid Template Area:
-named grid items can be referred by the grid-template-areas property of the grid container. the grid-area property can also be used to assign names to grid items.
-
-.grid-container{
-    grid-template-areas{
-        'header header header header header header'
-        'menu main main main right right'
-        'menu footer footer footer footer footer';
-    }
-
-    .item1 {grid-area: header;}
-    .item2 {grid-area: menu;}
-    .item3 {grid-area: main;}
-    .item4 {grid-area: right;}
-    .item5 {grid-area: footer;}
-}
-
------------------------------
-
-[12] CSS media queries
-
-/* old way of writing media queries */
-@media (max-width: 900px){
-    body{
-       background-color: rgb(255, 36, 127);
-    }
-}
-
-@media (min-width: 400px) and (max-width: 800px){
-    body{
-       background-color: rgb(120, 36, 255);
-    }
-}
-
-@media screen and (min-width: 800px){
-    .container{
-        --my-var: pink;
-    }
-}
-
-/* New way of writing media queries */
-
-/* orientation works when width < height */
-@media (orientation: portrait){
-    body{
-        background-color: pink;
-    }
-}
-
-@media (width <= 200px){
-    body{
-        background-color: greenyellow;
-    }
-}
-
-
-//Different Screens According to tailwind
-      //=> @media (min-width: 640px) { ... }
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-
-Recommended media points
-991px
-767px
-479px
-
-
-- always write media queries in higher to lower order.
-- min-width means starting from.
-- max-width means upto from.
-- for range use AND.
-- orientation works when width < height.
-- screen, print, all are types of media queries.
-
------------------------------
-
-[13] CSS Variables
-
--it is very important in css as it prevents repetition 
-of values in css
-
-syntax: --variable-name: value;
-selector{
-    property1: value1;
-    property2: var(--variable-name, fallback);
-}
-
-note: 
--variable works over the hierarchy of the tags.
--you can override variables in heirachy.
--also try to put fallbacks.
-
--global variable(it is accessible by all the elements)
-:root{
-    --my-gloabal-variable: #222;
-}
-
------------------------------
-
-[14] CSS Pseudo Classes and Pseudo Elements
-
---Pseudo Class: is used to define a special state of an element.
-pseudo class are also known as Pseudo Selectors.
-
-Examples:
-- :visited, :link
-- :hover, :active
-- :first-child
-- :last-child
-- :nth-child etc...
-
-/* nth child */
-/* n = 0, n starts from zero */
-/* an+b */
-
---Pseudo Elements: is used to style specified parts of an element.
-
-Examples:
-- ::first-letter
-- ::first-line
-- ::before (there content:'' is out of dom).
-- ::after  (there content:'' is out of dom).
-- ::selection etc...
-
-
-note: 
--pseudo-class: defining state of an element.
--pseudo-element: part of an element.
-
------------------------------
-
-[15] CSS Transform
-
--The Transform property applies a 2D or 3D transformation to an element.
-thid property allows you to rotate, scale, move, skew etc.
-
-Examples:
--scale (default: 1, default: 1) [for x and y respectively]
--scaleX (default: 1)
--scaleY (default: 1)
--scaleZ (default 1)
-
--skew(45deg, 10deg) [for x and y respectively]
--skewX(20deg)
--skewy(40deg)
-
--translate(50%, 50%) [for x and y respectively]
--translateX(50%)
--translateY(60%)
-
--rotate(50deg)
--rotateX(10deg)
--rotateY(62deg)
--rotateZ(16deg)
-
-eg: transform: rotate(5deg) scale(1) skew(50deg) translate(45%);
-
--Transform Origin(its basically a refference point)
-The transform origin property allows you to change the 
-position of transformed elements.
-
-2D transformations can change the x-axis and y-axis of an element.
-3D transformations can also change the z-axis of an element.
-
-supported values:
-- left
-- center
-- right
-- length
-- %
-
-transform-origin: 100px 200px (x and y axis respectively)
-transform-origin: right center;
-
------------------------------
-
-[16] CSS Transition 
-
-CSS transitions allow you to change property values smoothly, over a 
-given duration.
-
-to create a transition effect, you must specify two things:
-* the CSS property you want to add an effect to.
-* the duration of the effect.
-
-note: if duration part is not specified, 
-the transition will have no effect,
-because the default value is 0.
-
---transition
---transition-delay
---transition-duration
---transition-property [on which property you want a transition]
-
---transition-timing-function
-the transition-timing-function property can have following values:
-*ease - specifies a transition effect with a slow start, then fast, then end slowly(this is default). 
-*ease-in - specifies a transition effect with a slow start.
-*ease-out - specifies a transtion effect with a slow end.
-*ease-in-out - specifies a transition effect with with a slow start and end.
-*linear - specifies a transition effect with the same speed from start to end.
-*cubic-bezier(n,n,n,n) - lets youo define your own values in a cubic-beizer function.
-
-examples:
-transition-delay: 0s;
-
-transition-duration: 0.5s;
-
-transition-property: all;
-transition-property: border-radius, background-color, transform;
-
-transition-timing-function
-
------------------------------
-
-[17] CSS Animations 
-
-with transition you can work only one state(or two points),
-but with Animations you can control as much as you can.
-
-- CSS allows the animation of HTML elements without using
-javascript. you can change as many CSS properties as you want,
-as often as you wish. to use CSS animation, you must first specify 
-some keyframes for the animation.
-
-keyframes hold what styles the element will have at certain times.
-
---animation
---animation-name
---animation-duration
---animation-delay
---animation-iteration-count
---animation-direction
---animation-timing-function
-
-
---animation-direction
-the animation-direction property specifies whether an animation should 
-be played forwards, backwards or in alternate cycles.
-    *normal: the animation played as normal(forwards). this is default.
-    *reverse: in reverse direction(backwards).
-    *alternate: the animation is played forwards first, then backwards.
-    *alternate-reverse: the animation is played backwards first, then forwards.
-
---animation-timing-function
-it is same as in the transition one
-the transition-timing-function property can have following values:
-    *ease - specifies a transition effect with a slow start, then fast, then end slowly(this is default). 
-    *ease-in - specifies a transition effect with a slow start.
-    *ease-out - specifies a transtion effect with a slow end.
-    *ease-in-out - specifies a transition effect with with a slow start and end.
-    *linear - specifies a transition effect with the same speed from start to end.
-    *cubic-bezier(n,n,n,n) - lets youo define your own values in a cubic-beizer function.
-
---animation-fill-mode
-The animation-fill-property specifies a style for the target element WHEN
-the ANIMATION is NOT PLAYING(before it starts, after it ends, or both).
-
-    *none - default value. Animation will not apply any 
-    styles to the element before or after it is excecuting.
-
-    *forwards - the element will retain the style values that is set by the last 
-    keyframe(depends an animation-direction and animation-iteration-count).
-
-    *backwards - the element will get the style values that is set by the first
-    keyframe(depends on animation-direction), and retain this during the animation-delay period.
-
-    *both - the elements will follow the rules for both forwards and backwards,
-
-
-examples:
-
-selector{
-    animation-name: circles;
-}
-
-selector2{
-    animation-name: orbit;
-}
-
-@keyframes circles{
-    0%, 100%{transform: translate(0, 0);}
-
-    25%{transform: translate(300px, 0);    }
-
-    50%{transform: translate(300px, 300px);}
-
-    75%{transform: translate(0, 300px);}
-}
-
-@keyframes orbit{
-    from {
-        transform: rotate(0);
-    }
-
-    to{
-       transform: rotate(360deg); 
-    }
-}
+[3] Types of Operators
+
+in Javascript, an operator is a special symbol used to perform
+operations on operands(values and variables).
+
+- Assignment Operators
+- Arithmatic Operators
+- Comparison Operators
+- Logical Operators
+- Bitwise Operators 
+- String Operators
 
 +++++++++++++++++++ Completed! +++++++++++++++++++

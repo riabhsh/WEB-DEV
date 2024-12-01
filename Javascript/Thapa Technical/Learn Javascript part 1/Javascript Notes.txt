@@ -1,0 +1,129 @@
+====================================
+== 01. BASICS ==
+====================================
+
+three ways of writing JS
+1. inline
+2. internal 
+3. external
+
+* always remember script tag is on the last of the page
+reight above the end of the body tag.
+
+====================================
+== 02. VALUES & VARIABLES ==
+====================================
+In JavaScript, values and variables are fundamental concepts that form the basis of programming.
+
+Values:  A value is a piece of information that a program can work with. It can be a number, text, true/false, or more complex data.
+
+Variables: A variable is a container that holds a value. It has a name and can be used to store and manipulate data in a program.
+
+#Rules for writing variables
+- start only with letter, underscore(_) or Dollar Sign($) and can contain numbers.
+for eg: (rishabh123, _rishabh123 or $rish12abh).
+- no reserved keywords.
+- no spaces.
+- case sensitive
+- camelCase recommended.
+- can be long as you need.
+
+====================================
+== 03. Data Types ==
+====================================
+-What is Data Type?
+it defines the type of values that a variable can hold.
+
+-Data types are of two types
+a. Pimitive Data types
+b. Object/non-Primitive Data types
+
+-Primitive Data Types
+1. Numbers
+2. Strings
+3. Boolean
+4. Bigint (represents integer of arbritrary precision)
+5. Undefind (yet to be defined) 
+6. null (absence of a value)
+7. Symbol (represents a unique and immutable data type, often used to create unique identifiers)
+
+-Object Data Types
+1. An Object
+2. An Array
+3. A Date
+
+// According to w3 school //
+
+-JavaScript has 8 Datatypes
+String
+Number
+Bigint
+Boolean
+Undefined
+Null
+Symbol
+Object
+
+The Object Datatype
+The object data type can contain both built-in objects, and user defined objects:
+
+Built-in object types can be:
+
+objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.
+
+// Symbols https://playcode.io/javascript/symbols//
+JavaScript Symbols
+JavaScript Symbols are a new type of primitive data type introduced in the ES6 version of the language. They are used to represent unique values that can be used as identifiers or keys in objects. They are also used to create private properties and methods in classes.
+
+Why should you use it?
+Symbols are unique and immutable, so they can be used as unique identifiers in objects and classes.
+Symbols can be used to create private properties and methods in classes.
+Symbols are useful for creating constants that can be shared across different parts of your code.
+
+Symbols
+
+The JavaScript Symbol is a primitive data type, just like Number, String, Boolean, etc. It represents a unique identifier and can be used in various ways. Symbols are used to create object properties, for example, when you want to assign a unique identifier to an object. They can also be used as a way to create private properties in objects, as they are not enumerable. In addition, Symbols can be used to create unique constants, which are useful when creating APIs. Symbols are created using the Symbol() function. The function takes an optional string parameter, which can be used to give the Symbol a description. This description is useful for debugging purposes, as it can be used to identify the Symbol.
+
+
+q: What is the result of `typeof null` in JavaScript?
+a: its Object but thats a Bug.
+
+q: Convert a string to a number?
+a:We just need to add the '+' sign before the string or you can use a 
+constructor Number().
+
+q: Convert a number to a string?
+a:We just need to add an empty string after the number or you can use a 
+constructor String().
+
+q: Explain the concept of truthy and falsy values in JavaScript. Provide examples?
+a: in javascript, values are either considered "truthy" or "falsy" when evaluated in a boolean context.
+
+truthy values are treated as true in boolean contexts. example include:
+-true 
+-any non-empty string ("hello")
+-any non-zero number (42)
+-arrays and objects, even if they're not empty
+
+falsy values are treated as false in boolean contexts. example include:
+-false
+-0 (zero)
+-' '(an empty string)
+-null
+-undefined
+-NaN (Not a Number)
+
+
+//parseInt, parseFloat 
+-parseInt is used for converting to integers and ignores anything after the decimal point.
+-parseFloat is used for converting to floating-point numbers, preserving the decimal part.
+-Both functions will attempt to convert as much of the string as possible until an invalid character is encountered.
+
+//NaN == NaN
+it always gives false.
+
+====================================
+== 04. Data Types ==
+====================================
+
+1:51:00
