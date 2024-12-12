@@ -123,7 +123,64 @@ falsy values are treated as false in boolean contexts. example include:
 it always gives false.
 
 ====================================
-== 04. Data Types ==
+== 04. Concatination & Coercion ==
 ====================================
 
-1:51:00
+Concatenation in JavaScript
+In JavaScript, the + sign is not only used for arithmetic addition but also for string concatenation. 
+When the + operator is used with strings, it concatenates the strings together.
+
+It's important to note that if any operand of the + operator is a string, 
+JavaScript will treat the other operands as strings as well, resulting in string concatenation. 
+If both operands are numbers, the + operator performs numeric addition.
+
+const str = "Hello" + "World";
+console.log(str);
+
+Type coercion is the automatic conversion of "values" from one data type to another.
+
+It is a fundamental part of JavaScript and can be used to make code more readable and efficient.
+There are two types of coercion in JavaScript: implicit and explicit. Implicit coercion happens automatically, while explicit coercion is done manually by the programmer.
+
+note: It's worth noting that type coercion can lead to unexpected results, so it's essential to be aware of how JavaScript handles these situations.
+
+//* ============================
+//* Tricky Interview Questions
+//* ============================
+// console.log(10 + "20");
+// console.log(9 - "5");
+// console.log("Java" + "Script");
+// console.log(" " + " ");
+// console.log(" " + 0);
+// console.log("vinod" - "thapa");
+// console.log(true + true);
+// console.log(true + false);
+// console.log(false + true);
+// console.log(false - true);
+
+====================================
+== 05. Expressions & Operators ==
+====================================
+
+Expressions is a combination of operand/operands and the operator.
+where operator is used to perform the operation of the operators.
+
+-Types of Operators in JS
+1.Assignment operators
+2.Arithmetic operators
+3.In arithmetic we increment and decrement operator.
+4.Comparison operators
+5.Logical operators
+6.String operators
+7.Conditional (ternary) operator
+
+====================================
+== 06. Control Statements & Loops ==
+====================================
+1) if.. Else Statement
+2) Switch Statement
+3) While Loop
+4) Do While Loop
+5) For Loop
+6) For In / For Of Loop
+(Later in arrays)
