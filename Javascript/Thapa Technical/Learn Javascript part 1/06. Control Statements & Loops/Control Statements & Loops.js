@@ -46,17 +46,20 @@ else{
 //-Prime numbers are numbers that have only 2 factors: 1 and themselves.
 //-All prime numbers greater than 2 are odd. However, not all odd numbers are prime.
 {
-    console.log("\n++ Prime or Not ++");
-    var num = 0;
-
-    if(num == 2 || num == 1){
-        console.log(num + " is a Prime Number");
+    console.log("++ Prime Number Checker ++");
+    let n = 3;
+    let isPrime = true;
+    for(let i = 2; i < num; i++){
+        if(num % i === 0){
+            isPrime = false;
+        }
     }
-    else if(num % 2 != 0){
-        console.log(num + " is a Prime Number");
+
+    if(isPrime){
+        console.log(n + " is a prime number!");
     }
     else{
-        console.log(num + " is Not a Prime Number");
+        console.log(n + " is not a prime number!");
     }
 }
 
@@ -225,9 +228,48 @@ else{
 // calculate the sum of numbers from 1 to 10 using a for loop.
 {
     let sum = 0;
-for(let i = 1; i <= 10; i++){
-    sum = sum + i;
+    for(let i = 1; i <= 10; i++){
+        // debugger; for debugging in broswers console
+        sum = sum + i;
+    }
+
+    console.log("sum: " + sum);
 }
 
-console.log("sum: " + sum);
+// Program to print n prime numbers.
+{
+    //dekhenge pending
+}
+
+// print to check if a year is a leap year or not
+{
+    console.log("\n++ Leap year checker ++");
+    let year = 2024;
+
+    if(year % 4 === 0 % year % 100 !== 0 || year % 400 === 0){
+        console.log(year + " year is a Leap year.");
+    }
+    else {
+        console.log(year + " year is not a leap year.");
+    }
+}
+
+// print a program with Asterisks
+
+// i\j  1 2 3 4 5
+// _______________
+// 1    * - - - - 
+// 2    * * - - - 
+// 3    * * * - - 
+// 4    * * * * - 
+// 5    * * * * * 
+
+{
+    for(let i = 0; i < 6; i++){
+        var result = "";
+        for(let j = 0; j < i; j++){
+            result = result + '* ';
+        }
+        console.log(result);
+    }
 }

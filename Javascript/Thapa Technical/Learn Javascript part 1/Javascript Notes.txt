@@ -177,10 +177,48 @@ where operator is used to perform the operation of the operators.
 ====================================
 == 06. Control Statements & Loops ==
 ====================================
-1) if.. Else Statement
-2) Switch Statement
-3) While Loop
-4) Do While Loop
-5) For Loop
-6) For In / For Of Loop
+1. if.. Else Statement
+2. Switch Statement
+3. While Loop
+4. Do While Loop
+5. For Loop
+6. For In / For Of Loop
 (Later in arrays)
+
+===================
+== 07. Functions ==
+===================
+
+- Function is ab Block of reusable code.
+- that performs a specific task or set of task.
+- Functions are used to organize code into modular and manafeable pieces.
+- promotes code reuse and make programs more readable.
+
+function functionName(parameters){
+    // code to be executed
+    return result; // optional return statement
+}
+
+1. function Declaration/Defination
+2. function invocation/Calling
+3. function parameter
+4. function argument
+5. function Expressions
+6. anonymous function
+7. return function
+8. IIFE (Immediately Invoked Function Expression)
+9. more on functions
+
+====================
+== 08. ECMAScript ==
+====================
+
+--2015:
+- LET and const
+- Template Strings & String Interopolation
+- Default Arguments
+- Arrow Functions
+- Destructuring
+- Object properties
+- Rest Operators
+- Spread Operators
