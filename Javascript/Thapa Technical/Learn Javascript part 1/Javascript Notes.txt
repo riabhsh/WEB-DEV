@@ -216,9 +216,74 @@ function functionName(parameters){
 --2015:
 - LET and const
 - Template Strings & String Interopolation
+- Default Parameters
 - Default Arguments
 - Arrow Functions
 - Destructuring
 - Object properties
 - Rest Operators
 - Spread Operators
+
+===============
+== 09. Array ==
+===============
+-Array is an Object that reresents a collection of 
+Similar type of elements.
+
+-head: or first element refers to the element at index 0.
+-tail: or last element referes to the element at the last element which can be obtained
+using array.length - 1.
+
+-ECMAScript 2022: also introduces new .at() method in arrays which helps to index from last elements too easily.
+last index can be accessed by index -1 so on and so forth. 
+
+-creating array 
+1. array constructor
+2.array literals
+
+-accessing elements
+
+-modifying an array 
+
+-array traversal
+1. loops(for, while, do-while)
+2. for...of (for getting the values)
+3. for...in (for getting the index)
+4. forEach (for modifying and displaying the array but it dosn't return anything).
+5. map (it can returns a value and can change and mutate the value.)
+
+// forEach vs map {KEY DIFFERENCES}
+// no return / returns a value
+// no return, no chaining / returns a value so yes chaining
+// you dont need a new array but you want to modify and display the array./
+// when you want a new array based on the transformation of previous array.
+
+-INSERT/ADD/REPLACE/DELETE(CRUD)
+push(),pop(),shift(),unshift()
+
+-ADD and REMOVE anywhere in elements.
+splice()
+
+-SEARCH
+1.indexOf(searchElement, fromIndex); it returns the FIRST index at which the given element can be found in the array,
+or -1 if it is not present.
+2.lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+3.includes method checks whether an array includes a certain element, returning true or false.
+
+-FIND AND SEARCH
+1.find Method The find method is used to find the first element in an array that satisfies a provided testing function. It returns the first matching element or undefined if no element is found.
+
+2.findIndex Method: The findIndex() method of TypedArray instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
+
+3.filter Method: The filter method creates a new array with all elements that pass the test implemented by the provided function.
+
+4.set method (it removes the duplicate values)
+
+-SORT and COMPARE
+Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
+
+(its a trick actually)compare method actually sorts number properly more then 1 digit because 
+y default sort() sorts elements as strings.
+numbers.sort((a,b) => {if(a>b) return 1;   if(b>a) return -1 }); swap -1 to 1 for descending order.
+
+7:50

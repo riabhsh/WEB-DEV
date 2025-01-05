@@ -165,4 +165,3 @@ anon();
     isPalindrome("naman");
 }
 
-6:2
