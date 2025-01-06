@@ -328,6 +328,8 @@ console.log(serialNumber);
 serialNumber.sort();
 console.log(serialNumber);
 
+// this compare method actually sorts number properly more then 1 digit because 
+// by default sort() sorts elements as strings.
 const orderNumber = serialNumber.sort((a,b) => {
     if(a>b) return 1;
     if(b>a) return -1;
@@ -335,3 +337,25 @@ const orderNumber = serialNumber.sort((a,b) => {
 
 console.log(orderNumber);
 
+// =======
+// Interview Questions Array Filter
+// =======
+
+// Original array of numbers
+const sankhya3 = [1, 2, 3, 4, 5];
+
+//1. Using map to square each number and create a new array
+
+let square = sankhya3.map((curElem) => curElem*curElem);
+
+console.log(square);
+
+// 2. using the map method, write a function that takes array of strings and returns a new array where each string is capatalized.
+
+// 3. using the map method, write a function that takes array of numbers and returns and a new array where each number is squared, but only if its an even.
+
+let evenSquare = sankhya3.filter((curElem) => {if(curElem % 2 == 0){return curElem*curElem;}});
+
+console.log(evenSquare);
+
+// 4 using the map method, write a function that takes array of names and returns a new array where each name is prefixed with
