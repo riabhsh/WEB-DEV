@@ -29,7 +29,7 @@
 //* ======================================
 //*  Modifying Elements:
 //* =====================================
-//?👉  Modifying Elements: You can modify array elements by assigning new values to specific indices.
+//?👉  Modifying Ele ments: You can modify array elements by assigning new values to specific indices.
 
 //* =============================================
 //*  Array Traversal / Iterating Over Arrays
@@ -154,11 +154,6 @@
 // map() does not execute the function for empty elements.
 // map() does not change the original array.
 
-//? Map(), Reduce(), Filter()
-// map() creates a new array from calling a function for every array element.
-// map() does not execute the function for empty elements.
-// map() does not change the original array.
-
 // Original array of numbers
 // const numbers = [1, 2, 3, 4, 5];
 
@@ -166,6 +161,8 @@
 
 //? Reduce method
 // The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+// jaise aapko ecommerce website mein jab final total nikalte hai average nikalte hai Add to Cart products ka tab reduce lagta hai
+
 // syntax
 // array.reduce(function callback(accumulator, currentValue, index, array) {
 //   // Your logic here

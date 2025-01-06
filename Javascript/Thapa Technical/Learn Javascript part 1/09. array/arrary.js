@@ -347,15 +347,59 @@ const sankhya3 = [1, 2, 3, 4, 5];
 //1. Using map to square each number and create a new array
 
 let square = sankhya3.map((curElem) => curElem*curElem);
-
 console.log(square);
 
 // 2. using the map method, write a function that takes array of strings and returns a new array where each string is capatalized.
+const names = ["ram", "shyam", "arjun", "lakhan"];
+const capNames = names.map((curElem) => {
+    return curElem.toUpperCase();
+});
+console.log(capNames);
 
 // 3. using the map method, write a function that takes array of numbers and returns and a new array where each number is squared, but only if its an even.
 
-let evenSquare = sankhya3.filter((curElem) => {if(curElem % 2 == 0){return curElem*curElem;}});
+// let evenSquare = sankhya3.map((curElem) => {if(curElem % 2 === 0){return curElem*curElem;}}).filter((curElem) => curElem != undefined);
+// 2nd method
+let evenSquare = sankhya3
+.map((curElem) => (curElem % 2 === 0 ? curElem*curElem : undefined))
+.filter((curElem) => curElem != undefined);
 
 console.log(evenSquare);
 
-// 4 using the map method, write a function that takes array of names and returns a new array where each name is prefixed with
+// 4 using the map method, write a function that takes array of names and returns a new array where each name is prefixed with "Mr. "
+
+let preNames = names.map((curElem) => (`Mr. ${curElem}`));
+console.log(preNames);
+
+//? Reduce method
+// The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+// jaise aapko ecommerce website mein jab final total/average nikalte hai average nikalte hai Add to Cart products ka tab reduce lagta hai
+
+// syntax
+// array.reduce(function callback(accumulator, currentValue, index, array) {
+//   Your logic here
+//   Return the updated accumulator value
+// }, initialValue);
+
+// =======
+// Interview Questions Array Reduce
+// ======= 
+
+// write a javascript function that Calculates the total price of items in a shopping cart. the function should take an array of item prices as imput and return the total price.
+
+// !Example 2: Filtering Products by Price
+const shoppingCart = [
+    { name: "Laptop", price: 1200 },
+    { name: "Phone", price: 800 },
+    { name: "Tablet", price: 300 },
+    { name: "Smartwatch", price: 150 },
+  ];
+  // Filter products with a price less than or equal to 500
+  
+  let initialValue = 0;
+  const totalPrice = shoppingCart.reduce((accumulator, curElem,) => {
+       return accumulator + curElem.price;
+  }, initialValue);
+  
+  console.log(shoppingCart);
+  console.log(`total price: ${totalPrice}`);
