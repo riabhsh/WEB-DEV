@@ -238,7 +238,7 @@ using array.length - 1.
 last index can be accessed by index -1 so on and so forth. 
 
 -creating array 
-1. array constructor
+1.array constructor
 2.array literals
 
 -accessing elements
@@ -283,12 +283,12 @@ or -1 if it is not present.
 Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
 
 (its a trick actually)compare method actually sorts number properly more then 1 digit because 
-y default sort() sorts elements as strings.
+by default sort() sorts elements as strings.
 numbers.sort((a,b) => {if(a>b) return 1;   if(b>a) return -1 }); swap -1 to 1 for descending order.
 
 -Reduce
 // The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
-// jaise aapko ecommerce website mein jab final total/average nikalte hai average nikalte hai Add to Cart products ka tab reduce lagta hai
+// jaise aapko ecommerce website mein jab final total/average nikalte hai tabb Add to Cart products ka tab reduce lagta hai
 
 x
 array.reduce(function callback(accumulator, currentValue, index, array) {
@@ -296,4 +296,61 @@ array.reduce(function callback(accumulator, currentValue, index, array) {
   Return the updated accumulator value
 }, initialValue);
 
-================================
+=================
+== 10. Strings ==
+=================
+Strings in JavaScript are a fundamental data type that represents a sequence of characters
+
+// Note:
+//? Strings created with single or double quotes works the same.
+// There is no difference between the two.
+
+-=String Properties
+length: Property that returns the length of the string (number of characters).
+
+-=Escape Character: In JavaScript, the backslash \ is used as an escape character. It allows you to include special characters in a string.
+
+// Code	   Result	    Description
+// \'	    '	        Single quote
+// \"	    "	        Double quote
+// \\	    \	        Backslash
+
+/ let text = "My name is " Thapa Technical " & I am a Full Stack Developer. ";
+// let text =
+//   "My name is ' Thapa Technical ' & \\ I am a \"Full Stack \" Developer. ";
+// // let text = 'My name is " Thapa Technical " & I am a Full Stack Developer. ';
+
+// console.log(text);
+
+=====================
+== 11. Math Object ==
+=====================
+
+Math: The Math namespace object contains static properties and methods for mathematical constants and functions.
+Math works with the Number type. It doesn't work with BigInt.
+
+//? 1: Constants:
+//* - Math.PI: Represents the mathematical constant Pi (π).
+
+2. Basic Operations:
+Math.abs(): The Math.abs() static method returns the absolute value of a number.
+or in simple, how far the number is from 0. It will be always positive.
+
+Math.abs(): how far the numnber is from 0.
+Math.round(x)
+Math.ceil(x):
+Math.floor(x):
+Math.trunc(x): and Math.sign() were added to JavaScript 2015 - ES6.
+Math.sign():
+
+3. Exponential and Logarithmic Functions:
+Math.pow(x, y):
+Math.sqrt():
+Math.log(x) returns the natural logarithm of x.
+Math.log2(x) returns the base 2 logarithm of x.
+
+4. Random
+Generate Random number
+Math.random(): Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
+
+console.log((Math.random() * 100).toFixed(3));
