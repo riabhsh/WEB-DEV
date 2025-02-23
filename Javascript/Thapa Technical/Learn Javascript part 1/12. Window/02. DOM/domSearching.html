@@ -29,6 +29,7 @@ querySelectorAll(selector) -->
   <!-- it's a comment node  -->
   <body>
     <div>
+        <h2>DOM SEARCHING</h2>
       <h1 id="heading">DOM API</h1>
       <ul class="list-of--nodes">
         <li>1 node</li>
@@ -45,7 +46,7 @@ querySelectorAll(selector) -->
       <button>click me</button>
       <div class="value"></div>
     </div>
-    <script>
+    <!-- <script>
       let findElementById = document.getElementById("heading");
       // let findElementById = document.getElementById("#heading"); ❌
       const findElementByClassName =
@@ -83,7 +84,70 @@ querySelectorAll(selector) -->
       const findElementByQuerySelectorAll = document.querySelectorAll("li");
       console.log(findElementByQuerySelectorAll);
       findElementByQuerySelectorAll.forEach((curElem) => console.log(curElem));
-    </script> 
+    </script> -->
+
+    <!-- if you target 'element' the you get 'collections' (it can be iterable) -->
+    <!-- if you target 'nodes' then you get node 'list' -->
+    
+    <!-- MY SCRIPT -->
+    <script>
+
+        // ID
+        // {
+        // let findElementById = document.getElementById("heading");
+        // console.log(findElementById);
+
+        // console.log(findElementById.innerHTML);
+        // console.log(findElementById.innerText);
+        // console.log(findElementById.textContent);
+        // }
+
+        // CLASS | innerHTML vs innerText(jo browser mein dikhta hai) vs textContent(css apply nahi hota hai)
+        // {
+        //     const findElementByClassName = document.getElementsByClassName("list-of--nodes");
+        //     console.log(findElementByClassName);
+        //     console.log(... findElementByClassName); //using spread operator
+
+        //     // innerHTML vs innerText(jo browser mein dikhta hai) vs textContent(css apply nahi hota hai)
+        //     for(let elem of findElementByClassName){
+        //         console.log(elem.innerHTML);
+        //         console.log(elem.innerText);
+        //         console.log(elem.textContent);
+        //     }
+        // }
+
+        // ElementsByTagName
+        // {
+        //   let findElementsByTagName = document.getElementsByTagName("li");
+        //   console.log(getElementsByTagName);
+
+        //   for(let name of findElementsByTagName){
+        //     console.log(name);
+        //   }
+        // }
+    
+        // querySelector
+        // {
+        //   const findElementByQuerySelector = document.querySelector("#heading");
+        //   console.log(findElementByQuerySelector.innerHTML = "ram ram");
+        //   console.log(findElementByQuerySelector.innerText = "sita ram");
+        // }
+
+        // querySelectorAll
+        // {
+        //   const findElementByQuerySelector = document.querySelector("li");
+        //  console.log(findElementByQuerySelector);
+
+        //  const findElementByQuerySelectorAll = document.querySelectorAll("li");
+        //  console.log(findElementByQuerySelectorAll);
+
+        //  for(let elem of findElementByQuerySelectorAll){
+        //   console.log(elem);
+        //  }
+
+        //  findElementByQuerySelectorAll.forEach((curElem) => console.log(curElem));
+        // }
    
+   </script> 
   </body>
 </html>

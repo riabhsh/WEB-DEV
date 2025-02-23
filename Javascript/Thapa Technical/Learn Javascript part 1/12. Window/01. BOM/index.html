@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>
+        *{
+            --bg-color: rgba(0, 0, 0, 0.868);
+            color: rgb(240, 255, 185);
+        }
+
+        body{
+            background-color: var(--bg-color);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        button{
+            margin-bottom: 20px;
+            width: 150px;
+            height: 50px;
+            border-radius: 6px;
+            background-color: yellow;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            padding: 2px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>BOM in JS</h1>
+
+    <!-- ========== Start Window Property ========== -->
+    <h2>Start Window Property</h2>
+    <button
+      onclick="window.open('https://thapatechnical.shop/courses', '_blank')"
+    >
+      Navigate
+    </button>
+
+    <!-- Start History -->
+     <h2>JS History Object</h2>
+     <button onclick="history.back()">Back</button><br>
+     <button onclick="history.forward()">Forward</button><br>
+     <button onclick="history.go(-1)">Move Backward or Forward</button>
+    
+    <!-- JS Location Object -->
+     <h2>JS Location Object</h2>
+     <button onclick="location.reload()">Reload the Page</button><br>
+     <button onclick="location.replace('https://www.google.com/')">Navigate page using replace</button><br>
+     <button onclick="location.assign('https://www.google.com/')">Navigate page with Assign</button>
+
+     <!-- Start Screen -->
+    <h2>JavaScript Screen Object</h2>
+    <p>We will see in console.</p>
+
+    <footer style="font-family: monospace;">THX THAPPA BHAI FOR THE AWESOME COURSE</footer>
+    <script>
+        window.alert("window alert message");
+    </script>
+    </body>
+</html>

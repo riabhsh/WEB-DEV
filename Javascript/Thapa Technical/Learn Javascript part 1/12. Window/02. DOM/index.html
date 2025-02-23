@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in html</title>
+</head>
+<body>
+    <h1>Best JS Course</h1>
+    <h2>DOM NAVIGATION</h2>
+    <p>Understanding The DOM Tree Structure</p>
+    <hr />
+    <p>It's easy. Helps JS to communicate with HTML</p>
+
+     <!-- * Let's see DOM Navigation -->
+    <script>
+        let parent = document;
+        let htmlBody = document.body;
+        let htmlHead = document.head;
+        // console.log(htmlHead);
+
+        // let bodyChild = htmlBody.childNodes;
+        let bodyChild = htmlBody.children;
+        // console.log(bodyChild);
+
+        let firstChild = htmlBody.firstElementChild;
+        // console.log(firstChild);
+
+        // let firstChild2 = htmlBody.firstChild;
+        // console.log(firstChild2);
+
+        let lastChild = htmlBody.lastElementChild;
+        // console.log(lastChild);
+
+        // let lastChild2 = htmlBody.lastChild;
+        // console.log(lastChild2);
+
+        let nextSibling = firstChild.nextElementSibling;
+
+        let previousSibling = nextSibling.previousElementSibling;
+
+        let parentNode = previousSibling.parentElement;
+
+        console.log(nextSibling);
+        console.log(previousSibling);
+        console.log(parentNode);
+
+    </script>
+</body>
+</html>

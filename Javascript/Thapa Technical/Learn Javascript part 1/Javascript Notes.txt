@@ -354,3 +354,29 @@ Generate Random number
 Math.random(): Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
 
 console.log((Math.random() * 100).toFixed(3));
+
+================
+== 12. Window ==
+================
+-DOM is focused on the content of the page, DOM is a Live Representaion of a Document.
+-BOM is focused on the browser environment.
+
+the Window object serves as the global object that encompasses both the BOM and the DOM when working in a 
+browser environment.
+
+JavaScript access entire DOM tree as an Object.
+- DOM is a bridge between your HTML and the JS.
+
+-DOM provides the multiple properties and methods to dynamically change the content of the HTML document using javascript.
+
+-DOM and DOM api are same
+
+
+in DOM search
+-if you target 'element' the you get 'collections' (it can be iterable) / on the spot update hote.
+-if you target 'nodes' then you get node 'list'. / no on the spot update hote.
+
+-innerHTML vs innerText(jo browser mein dikhta hai) vs textContent(css apply nahi hota hai).
+The `innerHTML` property returns the complete content, including all HTML tags, inside the `ul` elements and their text content.
+ Example using `innerText`: Prints text as it appears on screen, considering styling and excluding hidden text.
+ Example using `textContent`: Prints text as it is in the markup, including hidden text and without considering styling.
