@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        :root{
+            font-size: 10px;
+        }
+
+        body{
+            background-color: #111;
+        }
+
+        h1{
+            font-size: 6rem;
+            padding: 30px 50px;
+        }
+
+        h2{
+            font-size: 4rem;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 0px 50px;
+        }
+
+        .btn-box{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 100px;
+        }
+
+        .btn{
+            background-color: yellow;
+            border: 4px solid rgb(255, 160, 17);
+            border-radius: 10px;
+            padding: 0.5rem 1.8rem;
+            color: black;
+            font-size: 20px;
+            font-weight: 900;
+            cursor: pointer;
+            height: fit-content;
+        }
+
+        .btn:hover{
+            border: 4px solid rgb(49, 49, 49);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Events</h1>
+    <div class="container">
+        <div class="box">
+            <h2>1.Inline Event</h2>
+            <!-- Start Inline Event -->
+            <div class="btn-box">
+                <button class="btn" onclick="alert('welcome')">greeting</button>
+                <button class="btn" ondblclick="alert('Welcome Again')">greeting Again</button>
+                <button class="btn" onmouseover="alert('Welcome Again')">greeting Again</button>
+            </div>
+        </div>
+        <div class="box">
+            <h2>2.Dom Event Handler</h2>
+            <!-- Start DOM Event Handler -->
+            <div class="btn-box">
+                <button class="btn" id="btn1">greeting</button>
+                <button class="btn" id="btn2">greeting Again</button>
+            </div>
+        </div>
+        <div class="box">
+            <h2>3.addEventListener Event Handler</h2>
+            <div class="btn-box">
+                <button class="btn" id="btn3">greeting</button>
+                <button class="btn" id="btn4">greeting Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //2. DOM EVENT LISTENER
+        // all the elements written in the small case
+        document.getElementById('btn1').onclick = () => {alert('welcome')};
+        document.getElementById("btn2").ondblclick = function () {
+            alert("welcome");
+        };
+
+        //3. addEventListener EVENT LISTENER [mostly used]
+        document.getElementById("btn3").addEventListener('click' , () => {alert("ram ram bhai");});
+
+        document.getElementById("btn3").addEventListener('click', function(){alert("hari om");});
+
+        document.getElementById("btn4").addEventListener('mouseover' , () => {alert("ram ram bhai");});
+    </script>
+</body>
+</html>

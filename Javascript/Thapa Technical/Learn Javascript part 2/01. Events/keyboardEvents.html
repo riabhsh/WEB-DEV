@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboardEvents</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        :root{
+            font-size: 10px;
+        }
+
+        .boxbox{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+        }
+
+        .main-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: fit-content;
+        }
+
+        h1{
+            color: whitesmoke;
+            font-size: 10rem;
+            text-shadow: 0px 0px 10px rgb(232, 255, 114);
+        }
+
+        .input{
+            color: black;
+            font-size: 3rem;
+            padding: 1rem 4rem;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            align-self: stretch;
+        }
+
+        .opt-box{
+            height: fit-content;
+            width: fit-content;
+            align-self: flex-start;
+            padding: 0.8rem 18rem;
+            Display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .key{
+            font-size: 4rem;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxbox">
+        <div class="main-box">
+            <h1>Keyboard Events</h1>
+            <input class="input" type="text" id="myInput" placeholder="Type something...">
+            <div class="opt-box output">
+                <p class="key keyPressed">Key pressed:</p>
+                <p class="key keyCode">Key code:</p>
+                <p class="key charCode">Char codeAt:</p>
+                <p class="key EventType">Event type:</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the input Element by its ID
+        var myInput = document.getElementById("myInput");
+        
+        const handleKeyPress = (event) => {
+            console.log(event);
+            // Display the info about the keyboard event in the console
+            console.log("Key pressed:", event.key);
+            console.log("Key code:", event.code);
+            console.log("Event type:", event.type);
+
+            document.querySelector(".keyPressed").textContent = `Key pressed: ${event.key}`;
+            document.querySelector(".keyCode").textContent = `Key code: ${event.code}`; 
+            document.querySelector(".charCode").textContent = `Char codeAt: ${event.key.charCodeAt(0)}`;
+            document.querySelector(".EventType").textContent = `EventType: ${event.type} `;
+            
+        };
+
+        myInput.addEventListener("keydown", handleKeyPress);
+    </script>
+</body>
+</html>
