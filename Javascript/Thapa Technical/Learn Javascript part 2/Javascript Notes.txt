@@ -28,3 +28,5 @@ localStorage.removeItem();
 JSON.stringify();
 JSON.parse();
 
+note: Hoisting not works in Fat arrow function
+
