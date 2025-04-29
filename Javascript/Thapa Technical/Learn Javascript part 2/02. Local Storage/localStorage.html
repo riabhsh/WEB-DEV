@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loacal Storage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 400px;
+            gap: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1{
+            color: aliceblue;
+            font-size: 50px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn{
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 100%;
+        }
+
+        #btn1{
+            background-color: yellow;
+        }
+
+        #btn2{
+            background-color: greenyellow;
+        }
+
+        #btn3{
+            background-color: rgb(240, 89, 89);
+        }
+
+        #btn1:hover, #btn2:hover, #btn3:hover{
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <section class="container">
+        <button class="btn" id="btn1">Add Data to Local Storage</button>
+        <button class="btn" id="btn2">Get Data from Local Storage</button>
+        <button class="btn" id="btn3">Delete Data from Local Storage</button>
+    </section>
+
+    <script>
+
+        const studentData = {
+            name: "rishabh",
+            age: "25",
+            country: "India",
+        };
+
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+        const btn3 = document.getElementById("btn3");
+
+        const addData = (event) => {
+            localStorage.setItem("item", "name");
+            localStorage.setItem('objectData', JSON.stringify(studentData));
+            console.log("Add Data");
+        }
+
+        const getData = (event) => {
+            const getItem1 = localStorage.getItem("item");
+            console.log(getItem1);
+            const getItem2 = JSON.parse(localStorage.getItem('objectData'));
+            console.log(getItem2);
+            console.log("Get Item");
+        }
+
+        const removeData = (event) => {
+            localStorage.removeItem("item");
+            localStorage.removeItem("objectData")
+            console.log("Removing Data");
+        }
+
+        btn1.addEventListener('click', addData);
+        btn2.addEventListener('click', getData);
+        btn3.addEventListener('click', removeData);
+    </script>
+</body>
+</html>

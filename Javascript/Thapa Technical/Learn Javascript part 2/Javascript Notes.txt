@@ -1,4 +1,30 @@
 part 2:
 ====================================
-== 01. ==
+== 01. == Events
 ====================================
+when you interact with the browser you click, type, touch(touchscreen) every interaction in website is an event.
+and you can use with the event..
+-Inline Event
+-DOM EVENT LISTENER
+-addEventListener EVENT LISTENER [mostly used]
+
+
+====================================
+== 02. == Local Storage
+====================================
+-The localStorage object allows you to save key/value pairs in the browser
+-it stores data with no expiration date.
+-the data is not deleted when the browser is closed and are available for future sessions.
+
+-add/store data from localStorage
+-get/retrieve data from localStorage
+-remove/delete data from localStorage
+
+localStorage.setItem();
+localStorage.getItem();
+localStorage.removeItem();
+
+//json object to json string and vice-versa
+JSON.stringify();
+JSON.parse();
+

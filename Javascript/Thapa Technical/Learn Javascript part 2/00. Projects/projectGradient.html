@@ -17,24 +17,18 @@
 
         body{
             font-family: monospace;
+            background-image: linear-gradient(to right, #7734c8, #ec1e68);
             
-        }
-
-        h1{
-            font-size: 8rem;
-            margin-top: 14rem;
-            color: whitesmoke;
-            text-shadow: 0px 0px 50px black;
         }
 
         .bg-container{
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             /* background-color: rgb(21, 0, 81); */
-            /* background-image: linear-gradient(to right, #000, #fff); */
+            /* background-image: linear-gradient(to-right, #442f33, #ec1e68); */
             gap: 5rem;
             
         }
@@ -94,14 +88,13 @@
 </head>
 <body>
     <div class="bg-container">
-        <h1>COLOR PICKER</h1>
         <div class="container">
             <div class="codeboxes">
-                <button class="btn" id="btn1">#00000</button>
-                <button class="btn" id="btn2">#fffff</button>
+                <button class="btn" id="btn1">#7734c8</button>
+                <button class="btn" id="btn2">#ec1e68</button>
             </div>
             <p class="copy">Copy your Code Here</p>
-            <p class="code">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, voluptatum.</p>
+            <p class="code">background-image: linear-gradient(to right, #7734c8, #ec1e68);</p>
         </div>
     </div>
 
@@ -110,8 +103,8 @@
         let btn1 = document.getElementById("btn1");
         let btn2 = document.getElementById("btn2");
         let copyDiv = document.querySelector(".code");
-        let rgb1 = "#000000";
-        let rgb2 = "#ffffff";
+        let rgb1 = "#7734c8";
+        let rgb2 = "#ec1e68";
         
         const hexvalues = () => {
             let myHexValues = "0123456789abcdef";
@@ -131,7 +124,7 @@
             console.log(document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`);
             document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
 
-            copyDiv.innerHTML = `background-image: linear-gradient(to-right, ${rgb1}, ${rgb2});`;
+            copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2});`;
     
         }
 
@@ -144,7 +137,7 @@
             console.log(document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`);
             document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
 
-            copyDiv.innerHTML = `background-image: linear-gradient(to-right, ${rgb1}, ${rgb2});`;
+            copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2});`;
         }
 
 
