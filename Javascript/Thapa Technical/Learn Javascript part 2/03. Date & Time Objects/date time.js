@@ -257,4 +257,4 @@ console.log("+++ INTERVIEW QUESTIONS +++");
     console.log(getDaysDifference(date1, date2)); // Output: 11 (difference in days)
 }
 
-3:27:05
+3:27:06
