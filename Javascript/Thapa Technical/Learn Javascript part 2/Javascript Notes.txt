@@ -30,3 +30,112 @@ JSON.parse();
 
 note: Hoisting not works in Fat arrow function
 
+
+====================================
+== 03. == Date and Time
+====================================
+
+//1.Date():++
+
+-1.Date() constructor: The Date() constructor creates Date objects. When called as a function, 
+it returns a string representing the current time.
+
+// Syntax:
+//- new Date()
+//- new Date(dateString)
+
+there are 9 ways to create date in JAVASCRIPT
+// new Date()
+// new Date(dateString)
+// new Date(year,month)
+// new Date(year,month,day)
+// new Date(year,month,day,hours)
+// new Date(year,month,day,hours,minutes)
+// new Date(year,month,day,hours,minutes,seconds)
+// new Date(year,month,day,hours,minutes,seconds,ms)
+// new Date(milliseconds)
+
+!very imp!
+in date() month starts with 0
+for eg new Date(2025,0,1) output will be 2025-jan-01;
+
+//2 Date String Format:++
+const date1 = new Date("2024-01-05"); // Year-Month-Day
+const date2 = new Date("January 5, 2024"); // Month Day, Year
+console.log("\n+2. Date String Format: +")
+console.log(date1);
+console.log(date2);
+
+// In JavaScript, the first day of the week (day 0) is Sunday.
+// day of the week (0 for Sunday, 1 for Monday, ..., 6 for Saturday)
+
+----------
+// +++ date methods +++
+//3. JavaScript Get Date Methods / Getting Components: ++
+In JavaScript, the first day of the week (day 0) is Sunday.
+day of the week (0 for Sunday, 1 for Monday, ..., 6 for Saturday)
+
+const currentDate = new Date();
+console.log(currentDate);
+currentDate.getFullYear();
+currentDate.getMonth();
+currentDate.getDate();
+currentDate.getDay();
+
+//4. JavaScript Set Date Methods / Setting Components: ++
+
+const date = new Date();
+console.log(date);
+
+date.setFullYear(2026);
+date.setMonth(7); //months indexing starts from 0
+date.setDate(15);
+----------
+
+// +++ Time Methods +++
+
+//5. JavaScript Get Time Methods / Getting Components: ++
+const currentTime = new Date();
+console.log(Date());
+
+currentTime.getHours();
+currentTime.getMinutes();
+currentTime.getSeconds();
+currentTime.getTime(); //millisecond fromm jan 1st 1970
+
+//6. JavaScript Set Time Methods / Setting Components: ++
+const date = new Date();
+console.log(Date());
+
+date.setHours(10);
+date.setMinutes(30);
+date.setSeconds(45);
+date.setMilliseconds(500);
+date.setTime(0);
+
+// +++ few useful methods of Date Object +++
+const date = new Date();
+
+date.toLocaleString(); //Returns a string representing the date and time portion of a Date object using the current locale's conventions.
+date.toLocaleDateString(); //Returns a string representing the date portion of a Date object using the current locale's conventions.
+date.toLocaleTimeString(); //Returns a string representing the time portion of a Date object using the current locale's conventions.
+Date.parse("2024-02-19T16:30:00Z"); //Parses a string representation of a date and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+
+const dateString = "2024-02-19T16:30:00Z";
+const parsedDate = Date.parse(dateString);
+console.log(parsedDate); // Example output: 1703254200000 (milliseconds)
+
+// +++ Bonus +++
+
+let newDate = new Date();
+console.log(Date.now());
+console.log(newDate.getTime());
+
+// ? Date.now() is a static method of the Date object.
+// ? Use Date.now() if you want the timestamp right this second.
+// ? It returns the current timestamp (number of milliseconds) representing the current moment.
+// ? Use new Date().getTime() if you have an existing Date object from elsewhere and want its timestamp.
+
+====================================
+== 04. == 
+====================================

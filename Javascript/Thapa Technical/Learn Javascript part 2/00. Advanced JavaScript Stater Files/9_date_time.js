@@ -70,7 +70,7 @@
 
 //? 2: JavaScript Stores Dates as Milliseconds: JavaScript stores dates as number of milliseconds since January 01, 1970.
 
-//* Date String Format: If the dateString is in a recognizable format, the Date object will be created accordingly.
+// * Date String Format: If the dateString is in a recognizable format, the Date object will be created accordingly.
 //? new Date(date string) creates a date object from a date string
 // const date1 = new Date("2024-01-05"); // Year-Month-Day
 // const date2 = new Date("January 5, 2024"); // Month Day, Year
@@ -93,7 +93,7 @@
 // In JavaScript, the first day of the week (day 0) is Sunday.
 // day of the week (0 for Sunday, 1 for Monday, ..., 6 for Saturday)
 
-//* ==================================================
+//* ===================================================
 //* JavaScript Set Date Methods / Setting Components:
 //* ===================================================
 
