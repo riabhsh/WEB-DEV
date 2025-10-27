@@ -143,3 +143,5 @@ console.log(newDate.getTime());
 2. clearTimeout()
 3. setInterval()
 4. clearInterval
+
+om namah shivay 5:16 27oct2025
