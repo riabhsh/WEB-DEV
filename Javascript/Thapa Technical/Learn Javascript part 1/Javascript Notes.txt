@@ -189,7 +189,7 @@ where operator is used to perform the operation of the operators.
 == 07. Functions ==
 ===================
 
-- Function is ab Block of reusable code.
+- Function is a Block of reusable code.
 - that performs a specific task or set of task.
 - Functions are used to organize code into modular and manafeable pieces.
 - promotes code reuse and make programs more readable.
@@ -365,7 +365,7 @@ the Window object serves as the global object that encompasses both the BOM and 
 browser environment.
 
 JavaScript access entire DOM tree as an Object.
-- DOM is a bridge between your HTML and the JS.
+-DOM is a bridge between your HTML and the JS.
 
 -DOM provides the multiple properties and methods to dynamically change the content of the HTML document using javascript.
 
@@ -373,8 +373,8 @@ JavaScript access entire DOM tree as an Object.
 
 
 in DOM search
--if you target 'element' the you get 'collections' (it can be iterable) / on the spot update hote.
--if you target 'nodes' then you get node 'list'. / no on the spot update hote.
+-if you target 'element' the you get 'collections' (it can be iterable) / onthe spot update here.
+-if you target 'nodes' then you get node 'list'. / no onthe spot update here.
 
 -innerHTML vs innerText(jo browser mein dikhta hai) vs textContent(css apply nahi hota hai).
 The `innerHTML` property returns the complete content, including all HTML tags, inside the `ul` elements and their text content.

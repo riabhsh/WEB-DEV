@@ -136,6 +136,10 @@ console.log(newDate.getTime());
 // ? It returns the current timestamp (number of milliseconds) representing the current moment.
 // ? Use new Date().getTime() if you have an existing Date object from elsewhere and want its timestamp.
 
-====================================
-== 04. == 
-====================================
+=============================
+== 04. == Time-Based Events
+=============================
+1. setTimeout()
+2. clearTimeout()
+3. setInterval()
+4. clearInterval
