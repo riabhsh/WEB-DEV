@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        /* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+    background-color: #222;
+    color: whitesmoke;
+}
+.container{
+    height: 100vh;
+    background-color: rgb(65, 64, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockHolder{
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 10px;
+  border-bottom: 15px solid yellow;
+  
+    box-shadow: 0px 0px 10px #edff00;
+
+}
+
+.timeHolder{
+  width: 400px;
+  height: 90px;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  display: flex;
+}
+.timeOptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    width: fit-content;
+}
+
+i{
+     color: #f3f5db;
+    text-shadow: 0px 0px 1px #edff00;
+}
+
+.mainDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    color: #f3f5db;
+    text-shadow: 0px 0px 1px #edff00;
+
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clockHolder">
+            <div class="timeHolder">
+                <div class="timeOptions">
+                    <i class="fas fa-clock" data-title="Time"></i>
+                    <i class="fas fa-stopwatch" data-title="stopWatch"></i>
+                    <i class="fas fa-clock" data-title="CountDown"></i>
+                </div>
+                <div class="mainDiv">
+                    <p id="clock">12:15:00 AM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const currentTime = () => {
+            let curTime = new Date().toLocaleTimeString('en-US', { hour12: true });
+            document.getElementById('clock').innerText = curTime;
+        }
+        currentTime();
+        const intervalId = setInterval(() => {currentTime()}, 1000);
+        setTimeout(() => {clearInterval(intervalId)}, 50000);
+    </script>
+</body>
+</html>
