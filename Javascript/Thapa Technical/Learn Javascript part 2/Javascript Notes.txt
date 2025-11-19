@@ -144,3 +144,22 @@ console.log(newDate.getTime());
 3. setInterval()
 4. clearInterval
 
+=============================
+== 05. == Objects
+=============================
+-Objects are a fundamental part of JavaScript providing a way to group related data and functions together. 
+-an object is a collection of key-value pairs.
+-where each key is a string and each value can be a data type, including other objects.
+-objects can have properties and methods, making them versatile for various use cases.
+- functions inside objects are called methods
+
+syntax - obj = []
+
+-Objects are excellent for modeling real-world entities. 
+For instance, you might represent a car, a user, or a 
+product as an object with properties like color, brand, 
+username, etc.
+
+=============================
+== 06. == Objects
+=============================
