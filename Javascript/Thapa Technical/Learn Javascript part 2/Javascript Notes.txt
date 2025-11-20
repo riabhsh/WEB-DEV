@@ -161,5 +161,6 @@ product as an object with properties like color, brand,
 username, etc.
 
 =============================
-== 06. == Objects
+== 06. == 
 =============================
+
