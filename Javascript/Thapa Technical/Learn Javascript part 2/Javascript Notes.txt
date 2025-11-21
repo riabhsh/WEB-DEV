@@ -1,4 +1,8 @@
 part 2:
+
+in JS world there are 5 Falsy values
+[false, null, undefined, 0, '', NaN]
+
 ====================================
 == 01. == Events
 ====================================
@@ -147,6 +151,8 @@ console.log(newDate.getTime());
 =============================
 == 05. == Objects
 =============================
+note: two objects can not be same even if they both have the same key:value because we compare objects not from there content but from there reference which is there memory location.
+
 -Objects are a fundamental part of JavaScript providing a way to group related data and functions together. 
 -an object is a collection of key-value pairs.
 -where each key is a string and each value can be a data type, including other objects.
@@ -160,7 +166,73 @@ For instance, you might represent a car, a user, or a
 product as an object with properties like color, brand, 
 username, etc.
 
+======================
+== 06. How JS Works == 
+======================
+- how javascript works from behind the scene like
+click on run -> parsing[lexical parse + syntax parser[AST]] -> JIT[just in Time Compiler] -> Exectuion[call stack, creation phase[hoisting, closure etc] , execution phase] -> output.
+
+- call stack
+- scope chaining[global scope, local scope[function scope, block scope]]
+- closure
+- async and sync JSON
+
 =============================
-== 06. == 
+== 07. EcmaScripts 2015-23 == 
 =============================
+--es2015 or ES6
+1. let, const
+2. TEMPLATE STRINGS or Template Literals
+3. DEFAULT Parameters
+4. FAT ARROW FUNCTION 
+5. Object Properties - Modern JavaScript - shorthand property notation [if object key and value are same then you can right only one of them.]
+6. Destructuring - Modern JavaScript
+7. Spread Operator - Modern JavaScript
+8. Rest parameters  - Modern JavaScript - spread operator used in funcions when you take indefinite parameters! but it can be used once in function.
+
+--es2016 or ES7
+1. Exponentiation Operator(num**Exponentiation)
+2. Array.includes()
+
+--es2017 or ES8
+1. String padding
+2. Object.values()
+3. Object.entries()
+4. Trailing commas in function parameter lists and calls
+5. Async functions 
+
+--es2018 or ES9
+1. Rest/Spread Properties[now it can also used in Objects also]
+2. Promise.prototype.finally()
+
+--es2019 or ES10
+1. Array.prototype.{flat,flatMap}
+2. Object.fromEntries() note: two objects can not be same even if they both have the same key:value because we compare objects not from there content but from there reference which is there memory location.
+3. String.prototype.{trimStart,trimEnd}
+4. Symbol.prototype.description
+5. Optional catch binding
+
+--es2020 or ES11
+1. BigInt
+2. Nullish Coalescing Operator ?? [null and undefined are consider false here]
+3. Optional Chaining Operator ?.
+4. promise.allSettled
+
+--es2021 or ES12
+1. String.prototype.replaceAll()
+2. Logical Assignment Operators (||=, &&=, ??=)
+3. Numeric Separators
+4. Promise.any()
+
+--es2022 or ES13
+1. .at() function for indexing[for all kind of array type clases like Strings, Array]
+2. Object.hasOwn(objName, propKey)  [it is superior then hasOwnProperty() because it solves the proble of null object]
+
+--es2023 or ES14
+1. Array.findLast()
+2. Array.findLastIndex()
+3. Array.prototype.toReversed()
+4. Array.prototype.toSorted(compareFn)
+5. Array.prototype.toSpliced(start, deleteCount, ...items)
+6. Array.prototype.with(index, value)
 
