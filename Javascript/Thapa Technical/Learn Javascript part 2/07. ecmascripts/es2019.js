@@ -1,4 +1,5 @@
-//* ==========================================
+{
+    //* ==========================================
 //*    ECMAScript Features (2019) / ES10
 //* =========================================
 
@@ -91,3 +92,48 @@
 //   console.log("there is an error");
 // }
 
+
+}
+
+// PRACTICE
+{
+// 1. Array.prototype.{flat,flatMap}
+// -flat
+// let arr = [12,21,51,[45,54,[45]]];
+// console.log(arr);
+// console.log(arr.flat());
+// console.log(arr.flat(2));
+
+// -flatMap()
+// const arr = ["my name", "is rishabh"];
+// const newArr = arr.flatMap((curVal) => curVal.split(" "));
+// console.log(newArr)
+
+// 2. Object.fromEntries()
+// const person = {name: "rishabh", age: 30};
+// const entries = Object.entries(person);
+// console.log(entries);
+// const newPerson = Object.fromEntries(entries);
+// console.log(newPerson);
+
+// 3. String.prototype.{trimStart,trimEnd}
+// const name = "   rishabh    ";
+// console.log(name);
+// console.log(name.trimStart());
+// console.log(name.trimEnd());
+
+// 4. Symbol.prototype.description
+// const mySymbol = Symbol("this is a symbol");
+// console.log(typeof mySymbol);
+// console.log(mySymbol.description);
+
+// 5. Optional catch binding
+// try{
+//     let a = 15;
+//     let b = 12;
+//     console.log(x);
+// } catch{
+//     console.log("no");
+// }
+
+}

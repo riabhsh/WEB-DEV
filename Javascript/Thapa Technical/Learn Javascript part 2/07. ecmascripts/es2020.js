@@ -1,4 +1,5 @@
-//* ==========================================
+{
+    //* ==========================================
 //*    ECMAScript Features (2020) / ES11
 //* =========================================
 
@@ -27,7 +28,7 @@
 // console.log(num);
 
 //* =======================================
-//*  Nullish Coalescing Operator ??
+//*   
 //* ===================================
 //? In JavaScript, the nullish coalescing operator (??) is a logical operator that provides a concise way to handle nullish (null or undefined) values. It returns its right-hand operand when its left-hand operand is null or undefined, otherwise, it returns the left-hand operand.
 
@@ -80,3 +81,45 @@
 //*  Promise.allSettled()
 //* ===================================
 //? We will cover later in our Promises section part of the video and you gonna love that part.
+
+}
+
+{
+// 1. BigInt
+// let maxNumber = Number.MAX_SAFE_INTEGER;
+// console.log(maxNumber);
+// console.log(maxNumber + 9); //not correct
+
+// const anotherLargeNumber = BigInt("2121515181545616512185165151206515156165165156120651065151561");
+// console.log(anotherLargeNumber * anotherLargeNumber);
+
+
+// 2. Nullish Coalescing Operator ?? [null and undefined are consider false here only]
+// let favNum = 0;
+// let userFavNum = favNum || 10;
+// console.log(userFavNum);
+
+// let userFavNum1 = favNum ?? 10; //only null and undefined 
+// console.log(userFavNum1);
+
+// 3. Optional Chaining Operator ?.
+// const person = {
+//     name: "rishabh",
+//     address: {
+//         city: 0,
+//         zipCode: 12345,
+//         location: {
+//             longitude: 565626,
+//             lattitude: 454545,
+//         },
+//     },
+// };
+
+// const cityLongitude = person.address.location.longitude;
+// console.log(cityLongitude);
+// const cityLatitude = person.address?.location?.lattitude ?? "no info about latitude";
+// console.log(cityLatitude);
+
+// 4. promise.allSettled
+// soon 
+}

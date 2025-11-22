@@ -236,3 +236,4 @@ click on run -> parsing[lexical parse + syntax parser[AST]] -> JIT[just in Time 
 5. Array.prototype.toSpliced(start, deleteCount, ...items)
 6. Array.prototype.with(index, value)
 
+

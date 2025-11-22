@@ -1,4 +1,5 @@
-//* ==========================================
+{
+    //* ==========================================
 //*    ECMAScript Features (2016):
 //* =========================================
 
@@ -30,3 +31,17 @@
 // let arr = ["ram", "shyam", "hari"];
 // let ans = arr.includes("ram");
 // console.log(ans);
+
+}
+
+
+// PRACTICE
+// {
+//     // 1. Exponentiation Operator(num**Exponentiation)
+//     let num = 2**10;
+//     console.log(num);
+
+//     // 2. Array.includes()
+//     let arr = ["ram", "shyam", "arjun", "laxman"];
+//     console.log(arr.includes("laxman"));
+// }

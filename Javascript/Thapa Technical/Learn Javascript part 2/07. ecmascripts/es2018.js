@@ -1,4 +1,4 @@
-//* ==========================================
+{//* ==========================================
 //*    ECMAScript Features (2018) / ES9
 //* =========================================
 
@@ -42,3 +42,37 @@
 //*  Promise.finally()
 //* =============================
 //? We will cover later in our Promises section part of the video and you gonna love that part.
+}
+
+
+// Rest(...args): Function ke andar saare input ko array me collect karna
+// Spread(...array):Array/object ko phaila kar individual values/keys dena
+
+// PRACTICE
+{
+// 1. Rest/Spread Properties[now it can also used in Objects also]
+// const numbers = [1, 2, 3, 4, 5];
+// [first, second, ...others] = numbers;
+// console.log(...others);
+
+// // spread elements
+// const num = [1,2,3,4,5,5];
+// const sum = (a,b,c,d,e) => a+b+c+d+e;
+// const sumOfNumbers = sum(...num);
+// console.log(sumOfNumbers);
+
+//  Object and Rest Operator
+// const student = {name: "rishabh", age:25, isStudent: true,};
+// const {age, ...others} = student;
+// console.log(others)
+
+// Object and Spread operator
+// const obj1 = { a: 10, b: 20, c: 50 };
+// const obj2 = { c: 30, d: 40 };
+
+// const newObj = { ...obj2, ...obj1 };
+// console.log(newObj);
+
+// 2. Promise.prototype.finally()
+// sooon
+}
