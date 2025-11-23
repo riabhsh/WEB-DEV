@@ -236,4 +236,24 @@ click on run -> parsing[lexical parse + syntax parser[AST]] -> JIT[just in Time 
 5. Array.prototype.toSpliced(start, deleteCount, ...items)
 6. Array.prototype.with(index, value)
 
+============================
+== 08. Advance Javascript == 
+============================
+1. Event Propogation[Travel]:
+Event Propogation refers to the process of how events Propogate or travel through DOM(Document Object Model) 
+Hierarchy.
 
+in JAVASCRIPT, there are two phase of event Propogation
+capturing[root of the dom to target element] phase and bubbling[target element to root of the dom] phase.
+
+-[a]: Capturing Phase: Event Travels from Top[root of the DOM] to Bottom[target Element].
+-[b]: Target Phase: when you click the element to fire the event is called target phase.
+-[c]: Bubbling Phase: Event travels from Bottom[target Element] to TOP[root of the DOM]. ---By default
+
+-to stop the propogation of the event... write event.stopPropogation(); in the event function
+-for starting the capturing phase[comment out the event.stopPropogation()] and there is a third parameter in the
+.getElementById("kuchBhi").addEventListen('click', functionName, true) -> here the third parameter which is true is responsible for the 
+capturing phase just add true in all the elements where you want in the Hierarchy of the DOM
+
+1. Event Delegation: dont write multiple events for one type of thing just delegate thing to there parent element
+and let them work accordingly thats the concept... event Delegation is a concept.

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body{ font-family: sans-serif;
+         position: relative;
+    }
+
+    h1{
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        width: 100%;
+        font-weight: 800;
+       position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+    section{
+        background-color: rgb(116, 47, 47);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        width: 400px;
+        height: 400px;
+        /* background-color: black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all .2s ease;
+    }
+    #outer{
+        width: 400px;
+        height: 400px;
+        background-color: rgb(255, 147, 6);
+    }
+    #middle{
+        width: 300px;
+        height: 300px;
+        background-color: antiquewhite;
+    }
+    #inner{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(57, 219, 255);
+    }
+
+    #outer:hover{
+        background-color: rgb(96, 247, 36);
+        border: 5px solid black;
+    }
+    #middle:hover{
+        background-color: cadetblue;
+          border: 5px solid black;
+    }
+    #inner:hover{
+        background-color: crimson;
+          border: 5px solid black;
+    }
+
+</style>
+<body>
+    <h1>Event Propogation</h1>
+    <section>
+        <div id="outer">
+            outer
+            <div id="middle">
+                middle
+                <div id="inner">
+                    inner
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const outercall = (event) => {
+            console.table([{
+                Description: "outer Call",
+                Target: event.target,
+                currentTarget: event.currentTarget, 
+            }])
+           // event.stopPropagation();  // stop the flow here
+        }
+
+        const middlecall = (event) => {
+            console.table([{
+                Description: "middle Call",
+                Target: event.target,
+                currentTarget: event.currentTarget, 
+            }])
+            // event.stopPropagation();  // stop the flow here
+        }
+
+        const innercall = (event) => {
+            console.table([{
+                Description: "inner Call",
+                Target: event.target,
+                currentTarget: event.currentTarget, 
+            }])
+            // event.stopPropagation();  // stop the flow here
+        }
+
+
+        // Bubble Phase(default) - bottom(target) to top(root of the dom).
+        // document.getElementById("outer").addEventListener("click", outercall);
+        // document.getElementById("middle").addEventListener("click", middlecall);
+        // document.getElementById("inner").addEventListener("click", innercall);
+
+        // Capturing Phase(just add true in third parameter) - top(root of the dom) to bottom(target).
+        document.getElementById("outer").addEventListener("click", outercall, true);
+        document.getElementById("middle").addEventListener("click", middlecall, true);
+        document.getElementById("inner").addEventListener("click", innercall, true);
+    </script>
+</body>
+</html>
