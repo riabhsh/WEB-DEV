@@ -239,7 +239,7 @@ click on run -> parsing[lexical parse + syntax parser[AST]] -> JIT[just in Time 
 ============================
 == 08. Advance Javascript == 
 ============================
-1. Event Propogation[Travel]:
+1. =Event Propogation[Travel]=:
 Event Propogation refers to the process of how events Propogate or travel through DOM(Document Object Model) 
 Hierarchy.
 
@@ -255,5 +255,37 @@ capturing[root of the dom to target element] phase and bubbling[target element t
 .getElementById("kuchBhi").addEventListen('click', functionName, true) -> here the third parameter which is true is responsible for the 
 capturing phase just add true in all the elements where you want in the Hierarchy of the DOM
 
-1. Event Delegation: dont write multiple events for one type of thing just delegate thing to there parent element
+1.1 =Event Delegation=: dont write multiple events for one type of thing just delegate thing to there parent element
 and let them work accordingly thats the concept... event Delegation is a concept.
+
+2. =First-Class Function=: A 'first-class function' is a 
+concept where a function can be treated 
+-as values,
+-assigned to variables,  
+-passed arround as arguments.
+
+3. =Higher-Order Functions=: a higher-order function is a function that 
+takes one or more functions as arguments 
+or returns function as a result.
+
+Jo function kisi aur function ko input mein le ya output mein de = Higher Order Function.
+
+4. =Callback Functions=: a Callback function is 
+a function passed as an argument to another function
+and is executed after the completion of a task. 
+
+Jo function kisi aur function ko diya jaata hai taaki woh baad mein usse call kare.
+jab ek function dusre function ko call karta hai and execute hota hai to callback.
+
+5. =Callback hell=: Callback hell, also known as the Pyramid of Doom, refers to a situation in asynchronous 
+JavaScript programming where multiple nested callbacks are used to handle asynchronous operations. 
+This often results in code that is difficult to read, understand, and maintain due to its deeply 
+nested structure.
+
+promises can prevent the problem of callback hell... 
+and for symplifying promises we have async-await.
+
+6. =Promises=:
+promise is like a placeholder for the result of an asynchronus operation. Or A container for the future result or value.
+
+promise -> pending[async task is pending] -> Settled[Asynctime is over - Resolve/Rejected]

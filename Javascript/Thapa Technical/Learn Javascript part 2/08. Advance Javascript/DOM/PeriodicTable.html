@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #222;
+            color: whitesmoke;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        *{
+            user-select: pointer;
+            user-select: none;
+        }
+
+        h1{
+            background-color: rgb(113, 0, 19);
+            text-align: center;
+            padding: 5px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.217);
+            text-shadow: 1px 1px 1px black;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            
+        }
+
+        .mainBody{
+            height: 89vh;
+            color: white;
+            font-weight: 800;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%; /* ya jitna chahiye */
+            max-width: 700px;
+            gap: 10px;
+        }
+
+        div{
+            border: 2px solid rgb(113, 0, 19);
+            width: fit-content;
+            padding: 30px;
+            flex: 0 0 calc(100% / 10); 
+            width: 10px;
+            height: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            font-size: 15px;
+        }
+
+        div:hover{
+            color: whitesmoke;
+            background-color:rgb(113, 0, 19);
+            border: 1px solid whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Delegation - Periodic Table</h1>
+    <section class="mainBody"> 
+    </section>
+
+    <script>
+        //Function to create a periodic table element 
+        const createPeriodicElement = (symbol, atomicNumber, name) => {
+            const element = document.createElement("div");
+            element.classList.add("element");
+            element.innerHTML = symbol;
+
+            element.setAttribute("data-atomic-number", atomicNumber);
+            element.setAttribute("data.element-name", name);
+
+            return element;
+        };
+
+        //Event handler for periodic table element click
+           const handleElementClick = (event) => {
+                const target = event.target;
+
+                if(target.classList.contains("element")){
+                    const atomicNumber = target.getAttribute("data-atomic-number");
+                    const elementName = target.getAttribute("data-element-name");
+                    alert(`Atomic-Number: ${atomicNumber}\nElement Name: ${elementName}`);                    
+                }
+            };
+
+            //Function to initialize the periodic table
+            function initializePeriodicTable() {
+            const mainBody = document.querySelector('.mainBody');
+            
+                //Create 50 periodic table elements  
+                for(let i = 1; i<=50; i++){
+                // const element = document.createElement("div");
+                // element.innerText = i;
+                // mainBody.append(element);
+
+                const element = createPeriodicElement(`Elem${i}`, i,`Element ${i}`);
+                mainBody.append(element);
+                }
+               
+                //Add event delegation to the container
+                // mainBody.addEventListener('click', (event)=>{
+                //     alert(event.target.innerText);
+                // });
+                mainBody.addEventListener('click', handleElementClick);
+            }
+
+            // Initialize the Periodic Table
+            initializePeriodicTable();
+    </script>
+</body>
+</html>
