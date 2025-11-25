@@ -289,3 +289,12 @@ and for symplifying promises we have async-await.
 promise is like a placeholder for the result of an asynchronus operation. Or A container for the future result or value.
 
 promise -> pending[async task is pending] -> Settled[Asynctime is over - Resolve/Rejected]
+Promise.all([]);
+Promise.settled([]);
+Promise.race([]);
+
+fetch() always returns promise! always gives headers:{accept: "application/json",}
+
+7. =async-await= 
+await is like pending in promise
+and use try and catch for the response!

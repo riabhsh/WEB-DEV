@@ -1,0 +1,98 @@
+<!--* In JavaScript, the try...catch statement is used for error handling. It allows you to catch and handle exceptions (errors) that occur within a block of code. Here's how it works:
+
+ <!--? try Block: The try block contains the code that you want to execute. It is the block of code where you anticipate that an error might occur. -->
+
+<!--? catch Block: The catch block follows the try block and is used to catch any exceptions (errors) that occur within the try block. If an exception occurs, JavaScript jumps to the catch block to handle the error. The catch block takes an error object as a parameter, which can be used to access information about the error, such as its message or stack trace. -->
+
+<!--? finally Block (Optional): The finally block, if provided, is executed regardless of whether an error occurs or not. It is typically used for cleanup tasks that should always be performed, such as closing resources or releasing locks. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Jokes - Promises and api</title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        background-color: #111;
+        color: whitesmoke;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 80px;
+        flex-direction: column;
+        height: 100vh;
+        padding: 100px 0;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        background-color: #222;
+        margin: 4px;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .api{
+        font-size: 20px;
+        font-weight: 800;
+        width: 400px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #fetchJoke{
+        font-size: 20px;
+        padding: 6px 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>Welcome to Dad Jokes😁</h1>
+    <div class="container">
+    <section class="api">no internet!!!</section>
+    <button id="fetchJoke">Joke Button</button>
+    </div>
+</body>
+<script>
+
+    const apiBody = document.querySelector(".api");
+    const apiUrl = "https://icanhazdadjoke.com/";
+
+    // async function fetchData(){
+      const fetchData = async () => {
+        try{
+          const res = await fetch(apiUrl, { 
+            headers:{
+                Accept: "application/json",
+                },
+            }); //returns promise
+        
+        const data = await res.json(); //it also returns promise!
+        console.log(data.joke);
+        apiBody.innerHTML = data.joke;
+        }
+        catch(error){
+          console.log(error);
+          apiBody.innerHTML = "no api";
+        }
+    }
+
+    fetchData();
+    
+    document.getElementById("fetchJoke").addEventListener("click", fetchData);
+</script>
+</html>

@@ -88,7 +88,7 @@
             element.innerHTML = symbol;
 
             element.setAttribute("data-atomic-number", atomicNumber);
-            element.setAttribute("data.element-name", name);
+            element.setAttribute("data-element-name", name);
 
             return element;
         };
@@ -100,7 +100,7 @@
                 if(target.classList.contains("element")){
                     const atomicNumber = target.getAttribute("data-atomic-number");
                     const elementName = target.getAttribute("data-element-name");
-                    alert(`Atomic-Number: ${atomicNumber}\nElement Name: ${elementName}`);                    
+                    alert(`Atomic-Number: ${atomicNumber}\n Element Name: ${elementName}`);                    
                 }
             };
 

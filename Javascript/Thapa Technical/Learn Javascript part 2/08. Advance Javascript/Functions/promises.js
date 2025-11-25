@@ -151,19 +151,68 @@
 // }
 
 // PRACTICE
+// {
+//   // const pr = new Promise((resolve, reject) => {});
+
+//   // pr.then((resolve) => {}).catch((reject) => {}).finally(() => {});
+
+// {
+//   const pr = new Promise((resolve, reject) => {
+//     // setTimeout(() => {resolve("Resolved!!!")}, 2000);
+//     setTimeout(() => {reject("Rejected!!!")}, 2000);
+//   });
+
+//   pr.then((resolve) => {console.log(resolve);})
+//   .catch((reject) => {console.log(reject);})
+//   .finally(() => {console.log("finally");});
+// }
+// }
+
+// StudentEnrollment promise function
 {
-  const pr = new Promise((resolve, reject) => {});
+//   {
+//     const isStudent = "rishabh";
 
-  pr.then((resolve) => {}).catch((reject) => {}).finally(() => {});
+//     const checkEnrollment = (isStudent) => {
+    
+//     return new Promise((resolve, reject) => {
+    
+//       setTimeout(() => {
+//         const enrollResult = Math.random(isStudent) >= 0.4;
+//         if(enrollResult == true){
+//           resolve("you are enrolled!");
+//         }
+//         else reject("you are not enrolled!");
+//       },2000);
+//     });
+//   }
 
-{
-  const pr = new Promise((resolve, reject) => {
-    // setTimeout(() => {resolve("Resolved!!!")}, 2000);
-    setTimeout(() => {reject("Rejected!!!")}, 2000);
-  });
-
-  pr.then((resolve) => {console.log(resolve);})
-  .catch((reject) => {console.log(reject);})
-  .finally(() => {console.log("finally");});
+//   checkEnrollment().then((resolve) => {console.log(resolve);})
+//   .catch((reject) => {console.log(reject);})
+//   .finally(() => {console.log("enrollment is done!");});
+// }
 }
-}
+
+// Promise.all method...
+
+const promise1 = new Promise((resolve, reject) => {setTimeout(() => {resolve("passed 1!")}, 1000)});
+
+const promise2 = new Promise((resolve, reject) => {setTimeout(() => {resolve("passed 2!")}, 2000)});
+
+// const promise3 = new Promise((resolve, reject) => {setTimeout(() => {resolve("passed 3!")}, 3000)});
+const promise3 = new Promise((resolve, reject) => {setTimeout(() => {reject("failed 3!")}, 100)}); //rejected version
+
+// Promise.all([promise1, promise2, promise3]).
+// then((resolve) => {console.log(resolve);})
+// .catch((reject) => {console.log(reject);})
+// .finally(() => {console.log("promise all executed!")});
+
+// Promise.allSettled([promise1, promise2, promise3]).
+// then((resolve) => {console.log(resolve);})
+// .catch((reject) => {console.log(reject);})
+// .finally(() => {console.log("promise all executed!")});
+
+Promise.race([promise1, promise2, promise3]).
+then((resolve) => {console.log(resolve);})
+.catch((reject) => {console.log(reject);})
+.finally(() => {console.log("promise all executed!")});
