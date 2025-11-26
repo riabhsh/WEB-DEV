@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - Dad Jokes - Promises and Async-Await</title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        background-color: #111;
+        color: whitesmoke;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 80px;
+        flex-direction: column;
+        height: 100vh;
+        padding: 100px 0;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        background-color: #222;
+        margin: 4px;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .api{
+        font-size: 20px;
+        font-weight: 800;
+        width: 400px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #fetchJoke{
+        font-size: 20px;
+        padding: 6px 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>Welcome to Dad Jokes😁</h1>
+    <div class="container">
+    <section class="api">no internet!!!</section>
+    <button id="fetchJoke">Joke Button</button>
+    </div>
+</body>
+<script>
+    const apiBody = document.querySelector(".api");
+    const apiUrl = "https://icanhazdadjoke.com/";
+
+    // PROMISE TECHNIQUE
+    {
+        //     const fetchData = () => {
+        //     //fetch returns promise
+        //     fetch(apiUrl, {headers:{"Accept": "application/json"}})
+        //     .then((res) => {console.log(res); return res.json();})
+        //     .then((data) => {console.log(data.joke);apiBody.textContent = data.joke;})
+        //     .catch((error) => {console.log(error); console.log("sorry");apiBody.innerHTML="no api!";});
+        //     }    
+        // document.getElementById("fetchJoke").addEventListener("click", fetchData);
+        // fetchData();
+    }
+    
+    // Async-Await TECHNIQUE
+    {
+        const fetchData = async () => {
+            try{
+                const result = await fetch(apiUrl, {headers:{"Accept":"application/json"}});
+                console.log(result);
+                const data = await result.json();
+                console.log(data.joke);
+                apiBody.innerHTML = data.joke;
+            }
+            catch(error){
+                console.log(error);
+                apiBody.innerHTML = "no api";
+            }
+        }
+        fetchData();
+        
+        document.getElementById("fetchJoke").addEventListener("click", fetchData);
+        
+    }
+</script>
+</html>

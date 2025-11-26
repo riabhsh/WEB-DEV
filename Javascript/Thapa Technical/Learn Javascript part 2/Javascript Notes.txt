@@ -298,3 +298,11 @@ fetch() always returns promise! always gives headers:{accept: "application/json"
 7. =async-await= 
 await is like pending in promise
 and use try and catch for the response!
+code look synchronous, behave asynchronous
+Async/await = Promises ko use karne ka shortcut.
+
+async → function returns Promise
+await → Promise resolve hone ka result return
+try/catch → error handling for async code
+No .then(), no callback hell
+Code looks synchronous but runs asynchronously
