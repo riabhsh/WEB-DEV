@@ -27,6 +27,11 @@
 // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=31143f5f8a7b2e81fc86e1caa49a4980
 }
 
+
+
+
+
+// dATE
 let dt = 1764252079;
 const curDate = new Date(dt * 1000); // convert in seconds
 console.log(curDate);
