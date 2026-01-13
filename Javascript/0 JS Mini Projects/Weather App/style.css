@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --searchBg: black;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #111;
+  color: whitesmoke ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #111;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    background-color: whitesmoke;
+
+    width: 500px;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    transition: all 0.2s ease;
+}
+
+.container:hover{
+    box-shadow: 0 0 3px 3px rgba(245, 245, 245, 0.954);
+}
+
+/* INPUT SEARCH */
+
+.weather_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+
+.weather_search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: grey;
+    padding: 1px 10px;
+    background-color: var(--searchBg);
+    border-radius: 10px;
+    
+}
+
+#w_search{
+    border: none;
+    padding: 10px 0px;
+    background-color: var(--searchBg);
+    color: whitesmoke;
+    font-weight: 250;
+    font-size: 18px;
+    cursor: pointer;
+    width: min-content;
+}
+
+#w_search::placeholder{
+    color: rgba(223, 223, 223, 0.938);
+    font-weight: 200;
+    font-size: 18px;
+
+}
+
+.searchBox {
+  padding: 10px 14px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Remove default ‘X’ button in Chrome/Safari */
+.searchBox::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Remove extra decorations */
+.searchBox::-webkit-search-decoration,
+.searchBox::-webkit-search-results-button,
+.searchBox::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* WEATHER BODY */
+
+.weather_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    padding: 40px 10px;
+    width: 100%;
+}
+
+.minMax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.weather_min, .weather_max{
+font-size: 15px;
+}
+
+.weather_cityName{
+    font-size: 45px;
+    font-weight: 600;    
+}
+
+.weather_dateTime{
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.weather_forecast{
+    background-color: white;
+    color: black;
+    padding: 3px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.weather_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+}
+
+.Weather_icon{
+
+}
+
+.weather_temperature{
+    font-size: 60px;
+    padding-left: 15px;
+}
+
+.minMax{
+    font-weight: 600;
+}
+
+/* weather_cards */
+
+.weather_cards{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px; /* optional */
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.weather_cards > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid whitesmoke;
+    padding: 10px 5px;
+    width: 230px;
+    border-radius: 10px;
+    padding-left: 20px;
+    
+}

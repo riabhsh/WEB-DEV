@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        
+        <section class="weather_header">
+            <label for="w_search">
+                <form class="weather_search" autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="w_icon"></i>
+                <input type="search" name="Search City" placeholder="Search City" id="w_search" class="searchBox">
+                </form>
+            </label>
+        </section>
+        
+        <section class="weather_body">
+            <h1 class="weather_cityName">Delhi, India</h1>
+            <p class="weather_dateTime">Monday, 01/Jan/2025, 10:10 AM</p>
+            <div class="weather_data">
+                <p class="weather_forecast">Haze</p>
+                <div class="Weather_icon"></div>
+            </div>
+            <p class="weather_temperature">120&#176</p>
+            <div class="minMax">
+                <p class="weather_min minMax">Min: 120&#176</p>
+                <p class="weather_max minMax">Max: 120&#176</p>
+            </div>
+        </section>
+
+        <section class="weather_cards">
+            <div class="w_feelsLike">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <p>Feels Like</p>
+                    <div class="weather_feelsLike">0&#176</div>
+                </div>
+            </div>
+
+            <div class="w_humidty">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <p>Humidity</p>
+                    <div class="weather_humidity">0%</div>
+                </div>
+            </div>
+
+            <div class="w_wind">
+                <i class="fa-solid fa-wind"></i>
+                <div>
+                    <p>Wind</p>
+                    <div class="weather_wind">0 m/s</div>
+                </div>
+            </div>
+
+            <div class="w_pressure">
+                <i class="fa-solid fa-gauge"></i>
+                <div>
+                    <p>Pressure</p>
+                    <div class="weather_pressure">0 hPa</div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
